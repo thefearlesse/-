@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ПІЛІВЄЄЄЄЄЄЄТ</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 25px 15px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .me {
+      width: min(330px, 80vw);
+      margin-top: 10px;
+    }
+
+    .hello {
+      margin: 10px 0 25px;
+      font-size: clamp(32px, 9vw, 65px);
+      font-weight: 900;
+      color: #111;
+      transform: rotate(-2deg);
+    }
+
+    .reply-text {
+      font-size: clamp(18px, 5vw, 30px);
+      font-weight: 800;
+      margin: 15px 0 8px;
+    }
+
+    .hand {
+      border: 0;
+      background: white;
+      font-size: 75px;
+      cursor: pointer;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: transform 0.15s;
+      touch-action: manipulation;
+    }
+
+    .hand:active {
+      transform: scale(0.8) rotate(-15deg);
+    }
+
+    .small {
+      margin-top: 5px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <img class="me" src="me.png" alt="Я махаю">
+
+    <div class="hello">
+      ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ
+    </div>
+
+    <div class="reply-text">
+      ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ У ВІДПОВІДЬ
+    </div>
+
+    <button class="hand" onclick="helloBack()">
+      👋
+    </button>
+
+    <div class="small">
+      сюди тикати
+    </div>
+
+  </div>
+
+  <script>
+    function helloBack() {
+      document.querySelector(".reply-text").textContent =
+        "ОГО, ВІДПОВІЛА 😭❤️";
+
+      document.querySelector(".hand").textContent = "👋🥹";
+    }
+  </script>
+
+</body>
+  </html>
