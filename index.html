@@ -15,15 +15,30 @@
     body {
       margin: 0;
       min-height: 100vh;
+
       background: #FFE4D1;
+
       font-family: Arial, sans-serif;
+
       text-align: center;
+
       overflow-x: hidden;
+
+      transition:
+        background 0.15s,
+        filter 0.15s;
     }
+
+
+    /* =====================================================
+       ЗАГАЛЬНЕ
+       ===================================================== */
 
     .page {
       min-height: 100vh;
-      padding: 25px 12px 60px;
+
+      padding:
+        25px 12px 60px;
     }
 
 
@@ -32,37 +47,52 @@
        ===================================================== */
 
     #page1 {
+
       min-height: 100vh;
 
       display: flex;
+
       flex-direction: column;
+
       align-items: center;
     }
 
+
     .me {
-      width: min(330px, 80vw);
+
+      width:
+        min(330px, 80vw);
+
       margin-top: 10px;
 
       mix-blend-mode: darken;
     }
 
+
     .hello {
+
       position: relative;
 
       width: 100%;
+
       height: 100px;
 
       overflow: hidden;
 
-      margin: 5px 0 15px;
+      margin:
+        5px 0 15px;
     }
 
+
     .hello-text {
+
       position: absolute;
 
       white-space: nowrap;
 
-      font-size: clamp(32px, 9vw, 65px);
+      font-size:
+        clamp(32px, 9vw, 65px);
+
       font-weight: 900;
 
       color: #111;
@@ -71,6 +101,7 @@
         moveText 3.2s linear infinite,
         bounceText 0.55s ease-in-out infinite alternate;
     }
+
 
     @keyframes moveText {
 
@@ -83,6 +114,7 @@
       }
 
     }
+
 
     @keyframes bounceText {
 
@@ -100,7 +132,9 @@
 
     }
 
+
     .decor {
+
       position: absolute;
 
       pointer-events: none;
@@ -113,25 +147,30 @@
       z-index: 2;
     }
 
+
     .d1 {
       left: 8%;
       top: 5px;
     }
+
 
     .d2 {
       right: 8%;
       top: 15px;
     }
 
+
     .d3 {
       left: 18%;
       bottom: 5px;
     }
 
+
     .d4 {
       right: 18%;
       bottom: 0;
     }
+
 
     @keyframes floatAround {
 
@@ -149,6 +188,7 @@
 
     }
 
+
     .reply-text {
 
       font-size:
@@ -161,6 +201,7 @@
 
       min-height: 38px;
     }
+
 
     .hand {
 
@@ -190,6 +231,7 @@
       touch-action: manipulation;
     }
 
+
     .hand:active {
 
       transform:
@@ -200,6 +242,7 @@
         0 2px 0 #666,
         0 5px 10px rgba(0,0,0,0.2);
     }
+
 
 
     /* =====================================================
@@ -217,10 +260,11 @@
       align-items: center;
     }
 
+
     .page2-title {
 
       font-size:
-        clamp(24px, 7vw, 42px);
+        clamp(30px, 9vw, 55px);
 
       font-weight: 900;
 
@@ -228,11 +272,32 @@
         5px 0 25px;
 
       line-height: 1.05;
+
+      animation:
+        titleWiggle 1.2s ease-in-out infinite alternate;
     }
 
 
+    @keyframes titleWiggle {
+
+      from {
+        transform:
+          rotate(-2deg)
+          scale(1);
+      }
+
+      to {
+        transform:
+          rotate(2deg)
+          scale(1.04);
+      }
+
+    }
+
+
+
     /* =====================================================
-       ФОТОГРАФІЇ
+       ФОТО
        ===================================================== */
 
     .photos-area {
@@ -245,6 +310,7 @@
         0 auto 35px;
     }
 
+
     .rope-row {
 
       position: relative;
@@ -254,8 +320,6 @@
       margin-bottom: 5px;
     }
 
-
-    /* МОТУЗКА */
 
     .rope {
 
@@ -282,6 +346,7 @@
       z-index: 1;
     }
 
+
     .rope1 {
 
       top: 15px;
@@ -290,6 +355,7 @@
         rotate(2deg);
     }
 
+
     .rope2 {
 
       top: 20px;
@@ -297,6 +363,7 @@
       transform:
         rotate(-2deg);
     }
+
 
     .rope3 {
 
@@ -308,7 +375,7 @@
 
 
     /* =====================================================
-       ФОТО
+       ФОТОГРАФІЇ
        ===================================================== */
 
     .photo {
@@ -338,8 +405,6 @@
     }
 
 
-    /* РІЗНІ КУТИ */
-
     .p1 {
 
       left: 7%;
@@ -350,6 +415,7 @@
       animation:
         swing1 3.2s ease-in-out infinite alternate;
     }
+
 
     .p2 {
 
@@ -362,6 +428,7 @@
         swing2 3.5s ease-in-out infinite alternate;
     }
 
+
     .p3 {
 
       right: 7%;
@@ -372,6 +439,7 @@
       animation:
         swing3 3.1s ease-in-out infinite alternate;
     }
+
 
     .p4 {
 
@@ -384,6 +452,7 @@
         swing4 3.6s ease-in-out infinite alternate;
     }
 
+
     .p5 {
 
       right: 18%;
@@ -394,6 +463,7 @@
       animation:
         swing5 3.3s ease-in-out infinite alternate;
     }
+
 
     .p6 {
 
@@ -406,6 +476,7 @@
         swing6 3.4s ease-in-out infinite alternate;
     }
 
+
     .p7 {
 
       left: 36%;
@@ -416,6 +487,7 @@
       animation:
         swing7 3.7s ease-in-out infinite alternate;
     }
+
 
     .p8 {
 
@@ -447,6 +519,7 @@
 
     }
 
+
     @keyframes swing2 {
 
       from {
@@ -464,6 +537,7 @@
       }
 
     }
+
 
     @keyframes swing3 {
 
@@ -483,6 +557,7 @@
 
     }
 
+
     @keyframes swing4 {
 
       from {
@@ -500,6 +575,7 @@
       }
 
     }
+
 
     @keyframes swing5 {
 
@@ -519,6 +595,7 @@
 
     }
 
+
     @keyframes swing6 {
 
       from {
@@ -536,6 +613,7 @@
       }
 
     }
+
 
     @keyframes swing7 {
 
@@ -555,6 +633,7 @@
 
     }
 
+
     @keyframes swing8 {
 
       from {
@@ -572,6 +651,7 @@
       }
 
     }
+
 
 
     /* =====================================================
@@ -601,6 +681,7 @@
         rgba(0,0,0,0.2);
     }
 
+
     .clip::before {
 
       content: "";
@@ -620,8 +701,9 @@
     }
 
 
+
     /* =====================================================
-       ПЕРЕВІРКА
+       ПЕРЕВІРКА ПІСЛЯ ФОТО
        ===================================================== */
 
     .captcha-title {
@@ -635,10 +717,6 @@
         5px 0 20px;
     }
 
-
-    /* =====================================================
-       КНОПКА ВІДБИТКА
-       ===================================================== */
 
     .finger-button {
 
@@ -675,6 +753,7 @@
       justify-content: center;
     }
 
+
     .finger-button:active {
 
       transform:
@@ -686,10 +765,6 @@
         rgba(0,0,0,0.2);
     }
 
-
-    /* =====================================================
-       КАРТИНКА ВІДБИТКА
-       ===================================================== */
 
     .fingerprint {
 
@@ -706,10 +781,6 @@
     }
 
 
-    /* =====================================================
-       ПРАВИЛЬНЕ КРУГОВЕ ЗАПОВНЕННЯ
-       ===================================================== */
-
     .progress-ring {
 
       position: absolute;
@@ -722,7 +793,6 @@
 
       background:
         conic-gradient(
-          #777 0deg,
           #777 0deg,
           transparent 0deg
         );
@@ -759,12 +829,14 @@
         successPop .5s ease-out;
     }
 
+
     .success-check {
 
       font-size: 70px;
 
       font-weight: 900;
     }
+
 
     .success-text {
 
@@ -776,6 +848,7 @@
       line-height: 1.15;
     }
 
+
     .success-love {
 
       margin-top: 12px;
@@ -785,6 +858,7 @@
 
       font-weight: 800;
     }
+
 
     @keyframes successPop {
 
@@ -806,7 +880,401 @@
 
     }
 
+
+
+    /* =====================================================
+       ТРЕТЯ СТОРІНКА — ВІКТОРИНА
+       ===================================================== */
+
+    #page3 {
+
+      display: none;
+
+      min-height: 100vh;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: flex-start;
+    }
+
+
+    .quiz-title {
+
+      font-size:
+        clamp(30px, 8vw, 48px);
+
+      font-weight: 900;
+
+      margin:
+        15px 0 30px;
+    }
+
+
+    .question-box {
+
+      width: 100%;
+
+      max-width: 500px;
+
+      padding:
+        25px 18px 30px;
+
+      background:
+        rgba(255,255,255,0.45);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.12);
+    }
+
+
+    .question-number {
+
+      font-size: 17px;
+
+      font-weight: 700;
+
+      color: #777;
+
+      margin-bottom: 12px;
+    }
+
+
+    .question-text {
+
+      font-size:
+        clamp(25px, 7vw, 36px);
+
+      font-weight: 900;
+
+      line-height: 1.1;
+
+      margin-bottom: 25px;
+    }
+
+
+    .answers {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+    }
+
+
+    .answer-button {
+
+      width: 100%;
+
+      min-height: 58px;
+
+      border: none;
+
+      border-radius: 18px;
+
+      background: white;
+
+      color: #111;
+
+      font-size: 21px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 5px 0 #d0b8aa;
+
+      transition:
+        transform .12s,
+        background .15s,
+        color .15s;
+    }
+
+
+    .answer-button:active {
+
+      transform:
+        translateY(4px);
+
+      box-shadow:
+        0 1px 0 #d0b8aa;
+    }
+
+
+    .answer-button.correct {
+
+      background:
+        #75d66f;
+
+      color: white;
+    }
+
+
+    .answer-button.wrong {
+
+      background:
+        #ff5252;
+
+      color: white;
+    }
+
+
+    /* =====================================================
+       ПРИКОЛ З ТАНКЄТАЧКОЮ
+       ===================================================== */
+
+    body.prank {
+
+      animation:
+        redFlash .22s linear 4;
+    }
+
+
+    @keyframes redFlash {
+
+      0% {
+        background:
+          #FFE4D1;
+      }
+
+      50% {
+        background:
+          #ff5b5b;
+      }
+
+      100% {
+        background:
+          #FFE4D1;
+      }
+    }
+
+
+    .prank-message {
+
+      display: none;
+
+      margin-top: 20px;
+
+      font-size:
+        clamp(25px, 7vw, 38px);
+
+      font-weight: 900;
+
+      color:
+        #e00000;
+
+      animation:
+        shake .45s ease-in-out;
+    }
+
+
+    .prank-message.show {
+
+      display: block;
+    }
+
+
+    @keyframes shake {
+
+      0% {
+        transform:
+          translateX(0);
+      }
+
+      20% {
+        transform:
+          translateX(-10px);
+      }
+
+      40% {
+        transform:
+          translateX(10px);
+      }
+
+      60% {
+        transform:
+          translateX(-7px);
+      }
+
+      80% {
+        transform:
+          translateX(7px);
+      }
+
+      100% {
+        transform:
+          translateX(0);
+      }
+
+    }
+
+
+
+    /* =====================================================
+       ФІНАЛ ВІКТОРИНИ
+       ===================================================== */
+
+    .quiz-finished {
+
+      display: none;
+
+      width: 100%;
+
+      max-width: 550px;
+
+      padding:
+        30px 15px;
+    }
+
+
+    .quiz-finished-title {
+
+      font-size:
+        clamp(28px, 8vw, 43px);
+
+      font-weight: 900;
+
+      line-height: 1.1;
+
+      margin-bottom: 20px;
+    }
+
+
+    .quiz-finished-text {
+
+      font-size:
+        clamp(18px, 5vw, 25px);
+
+      font-weight: 700;
+
+      line-height: 1.3;
+
+      margin-bottom: 35px;
+    }
+
+
+    /* =====================================================
+       ЧЕТВЕРТА СТОРІНКА — АВТЕНТИФІКАЦІЯ
+       ===================================================== */
+
+    #page4 {
+
+      display: none;
+
+      min-height: 100vh;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+
+    .auth-title {
+
+      font-size:
+        clamp(28px, 8vw, 45px);
+
+      font-weight: 900;
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+    }
+
+
+    .auth-text {
+
+      font-size:
+        clamp(18px, 5vw, 25px);
+
+      font-weight: 700;
+
+      line-height: 1.3;
+
+      margin-bottom: 30px;
+    }
+
+
+    .auth-hint {
+
+      font-size: 15px;
+
+      color: #777;
+
+      margin-top: 18px;
+    }
+
+
+
+    /* =====================================================
+       П'ЯТА СТОРІНКА — ЗАГОТОВКА СВІДОЦТВА
+       ===================================================== */
+
+    #page5 {
+
+      display: none;
+
+      min-height: 100vh;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+
+    .certificate-placeholder {
+
+      width: 92%;
+
+      max-width: 600px;
+
+      padding:
+        40px 20px;
+
+      background:
+        #fffaf4;
+
+      border:
+        5px solid #8B6548;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.18);
+    }
+
+
+    .certificate-placeholder h1 {
+
+      font-size:
+        clamp(28px, 8vw, 45px);
+
+      margin:
+        0 0 20px;
+    }
+
+
+    .certificate-placeholder p {
+
+      font-size:
+        clamp(18px, 5vw, 25px);
+
+      font-weight: 700;
+
+      line-height: 1.4;
+    }
+
   </style>
+
 </head>
 
 
@@ -814,10 +1282,14 @@
 
 
   <!-- =====================================================
-       ПЕРША СТОРІНКА
+       СТОРІНКА 1
        ===================================================== -->
 
-  <div id="page1" class="page">
+  <div
+    id="page1"
+    class="page"
+  >
+
 
     <img
       class="me"
@@ -829,13 +1301,21 @@
 
     <div class="hello">
 
-      <div class="decor d1">♡</div>
+      <div class="decor d1">
+        ♡
+      </div>
 
-      <div class="decor d2">✦</div>
+      <div class="decor d2">
+        ✦
+      </div>
 
-      <div class="decor d3">:3</div>
+      <div class="decor d3">
+        :3
+      </div>
 
-      <div class="decor d4">👋</div>
+      <div class="decor d4">
+        👋
+      </div>
 
 
       <div class="hello-text">
@@ -871,7 +1351,7 @@
 
 
   <!-- =====================================================
-       ДРУГА СТОРІНКА
+       СТОРІНКА 2 — ФОТАЧКІІІІІ
        ===================================================== -->
 
   <div
@@ -882,9 +1362,7 @@
 
     <div class="page2-title">
 
-      ТУТ ТРОХИ<br>
-
-      НАШИХ ФОТОЧОК 📸
+      ФОТАЧКІІІІІ 📸
 
     </div>
 
@@ -912,7 +1390,6 @@
         ></div>
 
 
-
         <img
           class="photo p2"
           src="photo2.jpg"
@@ -923,7 +1400,6 @@
           class="clip"
           style="left: 39%; top: 37px;"
         ></div>
-
 
 
         <img
@@ -960,7 +1436,6 @@
         ></div>
 
 
-
         <img
           class="photo p5"
           src="photo5.jpg"
@@ -995,7 +1470,6 @@
         ></div>
 
 
-
         <img
           class="photo p7"
           src="photo7.jpg"
@@ -1006,7 +1480,6 @@
           class="clip"
           style="left: 39%; top: 37px;"
         ></div>
-
 
 
         <img
@@ -1026,10 +1499,6 @@
 
 
 
-    <!-- =====================================================
-         ПЕРЕВІРКА
-         ===================================================== -->
-
     <div class="captcha-title">
 
       ПЕРЕВІРКА НА<br>
@@ -1039,12 +1508,9 @@
     </div>
 
 
-
-    <!-- КНОПКА -->
-
     <button
       class="finger-button"
-      id="fingerButton"
+      id="fingerButton1"
     >
 
       <img
@@ -1056,24 +1522,19 @@
 
       <div
         class="progress-ring"
-        id="progressRing"
+        id="progressRing1"
       ></div>
 
     </button>
 
 
-
-    <!-- УСПІШНА ПЕРЕВІРКА -->
-
     <div
       class="success"
-      id="success"
+      id="success1"
     >
 
       <div class="success-check">
-
         ✓
-
       </div>
 
 
@@ -1096,11 +1557,234 @@
 
 
 
+  <!-- =====================================================
+       СТОРІНКА 3 — ВІКТОРИНА
+       ===================================================== -->
+
+  <div
+    id="page3"
+    class="page"
+  >
+
+
+    <div class="quiz-title">
+
+      МІНІ-ВІКТОРИНА 😈
+
+    </div>
+
+
+    <div
+      class="question-box"
+      id="questionBox"
+    >
+
+
+      <div
+        class="question-number"
+        id="questionNumber"
+      >
+
+        ПИТАННЯ 1 / 3
+
+      </div>
+
+
+      <div
+        class="question-text"
+        id="questionText"
+      >
+
+        КОЛИ МИ ПОЧАЛИ ЗУСТРІЧАТИСЬ?
+
+      </div>
+
+
+      <div
+        class="answers"
+        id="answers"
+      >
+
+        <button
+          class="answer-button"
+          data-answer="wrong"
+        >
+
+          15 серпня
+
+        </button>
+
+
+        <button
+          class="answer-button"
+          data-answer="correct"
+        >
+
+          16 серпня
+
+        </button>
+
+
+        <button
+          class="answer-button"
+          data-answer="wrong"
+        >
+
+          13 серпня
+
+        </button>
+
+      </div>
+
+
+      <div
+        class="prank-message"
+        id="prankMessage"
+      >
+
+        ОТ ВРЄДІНА 😭
+
+      </div>
+
+    </div>
+
+
+
+    <div
+      class="quiz-finished"
+      id="quizFinished"
+    >
+
+
+      <div class="quiz-finished-title">
+
+        ВІТАЄМО! 🎉
+
+      </div>
+
+
+      <div class="quiz-finished-text">
+
+        ВИ УСПІШНО ЗАВЕРШИЛИ ОПИТУВАННЯ ❤️<br><br>
+
+        ТЕПЕР ПРОЙДІТЬ АВТЕНТИФІКАЦІЮ,<br>
+
+        ЩОБ ПІДТВЕРДИТИ,<br>
+
+        ЧИ ВИ ТОЧНО ТАНКЄТОЧКА 😈
+
+      </div>
+
+
+      <button
+        class="finger-button"
+        id="fingerButton2"
+      >
+
+        <img
+          class="fingerprint"
+          src="fingerprint.png"
+          alt="Відбиток пальця"
+        >
+
+
+        <div
+          class="progress-ring"
+          id="progressRing2"
+        ></div>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       СТОРІНКА 4 — АВТЕНТИФІКАЦІЯ
+       ===================================================== -->
+
+  <div
+    id="page4"
+    class="page"
+  >
+
+
+    <div class="auth-title">
+
+      АВТЕНТИФІКАЦІЮ<br>
+      ПРОЙДЕНО ✓
+
+    </div>
+
+
+    <div class="auth-text">
+
+      ТАНКЄТОЧКА ПІДТВЕРДЖЕНА ❤️<br><br>
+
+      ПЕРЕНАПРАВЛЯЄМО<br>
+      ДО ОСОБЛИВО ВАЖЛИВОГО ДОКУМЕНТА...
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       СТОРІНКА 5 — ЗАГОТОВКА ПІД СВІДОЦТВО
+       ===================================================== -->
+
+  <div
+    id="page5"
+    class="page"
+  >
+
+
+    <div
+      class="certificate-placeholder"
+    >
+
+      <h1>
+
+        💍 СВІДОЦТВО 💍
+
+      </h1>
+
+
+      <p>
+
+        ТУТ БУДЕ НАШЕ<br>
+
+        СВІДОЦТВО ПРО ШЛЮБ ❤️
+
+      </p>
+
+
+      <p>
+
+        СТОРІНКА ЩЕ В ПРОЦЕСІ<br>
+
+        ПІДГОТОВКИ 😎
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
   <script>
 
 
     /* =====================================================
-       МАХАННЯ
+       АНІМАЦІЯ МАХАННЯ
        ===================================================== */
 
     const me =
@@ -1124,7 +1808,34 @@
 
 
     /* =====================================================
-       ПЕРЕХІД НА ДРУГУ СТОРІНКУ
+       ФУНКЦІЯ ПЕРЕХОДУ
+       ===================================================== */
+
+    function showPage(page) {
+
+      document
+        .querySelectorAll(".page")
+        .forEach(p => {
+
+          p.style.display = "none";
+
+        });
+
+
+      page.style.display = "flex";
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+
+    /* =====================================================
+       ПЕРША СТОРІНКА
        ===================================================== */
 
     const helloButton =
@@ -1137,20 +1848,11 @@
         "replyText"
       );
 
-    const page1 =
-      document.getElementById(
-        "page1"
-      );
-
-    const page2 =
-      document.getElementById(
-        "page2"
-      );
-
 
     helloButton.addEventListener(
       "click",
       () => {
+
 
         replyText.textContent =
           "ДААААА ВОНА ПОМАХАЛА 😭❤️";
@@ -1160,234 +1862,640 @@
           "👋🥹";
 
 
+        /*
+          Даємо їй 3,5 секунди
+          роздивитися реакцію
+        */
+
         setTimeout(() => {
 
-          page1.style.display =
-            "none";
+          showPage(
+            document.getElementById(
+              "page2"
+            )
+          );
 
-          page2.style.display =
-            "flex";
+        }, 3500);
+
+      }
+    );
 
 
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
+
+    /* =====================================================
+       ФУНКЦІЯ ВІДБИТКА
+       ===================================================== */
+
+    function setupFingerprint(
+      button,
+      ring,
+      seconds,
+      callback
+    ) {
+
+      let holding = false;
+
+      let startTime = 0;
+
+      let timer = null;
+
+      let animation = null;
+
+
+      function updateProgress() {
+
+        if (!holding) {
+          return;
+        }
+
+
+        const elapsed =
+          Date.now() - startTime;
+
+
+        const progress =
+          Math.min(
+            elapsed /
+              (seconds * 1000),
+            1
+          );
+
+
+        const degrees =
+          progress * 360;
+
+
+        ring.style.background =
+          `conic-gradient(
+            #777 0deg,
+            #777 ${degrees}deg,
+            transparent ${degrees}deg,
+            transparent 360deg
+          )`;
+
+
+        if (progress < 1) {
+
+          animation =
+            requestAnimationFrame(
+              updateProgress
+            );
+
+        }
+
+      }
+
+
+      function startHold(event) {
+
+        event.preventDefault();
+
+
+        if (holding) {
+          return;
+        }
+
+
+        holding = true;
+
+
+        startTime =
+          Date.now();
+
+
+        ring.style.display =
+          "block";
+
+
+        updateProgress();
+
+
+        timer =
+          setTimeout(() => {
+
+
+            holding = false;
+
+
+            cancelAnimationFrame(
+              animation
+            );
+
+
+            ring.style.display =
+              "none";
+
+
+            button.style.display =
+              "none";
+
+
+            callback();
+
+
+          }, seconds * 1000);
+
+      }
+
+
+      function stopHold() {
+
+        if (!holding) {
+          return;
+        }
+
+
+        holding = false;
+
+
+        clearTimeout(timer);
+
+
+        cancelAnimationFrame(
+          animation
+        );
+
+
+        ring.style.display =
+          "none";
+
+
+        ring.style.background =
+          `conic-gradient(
+            #777 0deg,
+            transparent 0deg
+          )`;
+
+      }
+
+
+      button.addEventListener(
+        "pointerdown",
+        startHold
+      );
+
+
+      button.addEventListener(
+        "pointerup",
+        stopHold
+      );
+
+
+      button.addEventListener(
+        "pointercancel",
+        stopHold
+      );
+
+
+      button.addEventListener(
+        "pointerleave",
+        stopHold
+      );
+
+    }
+
+
+
+    /* =====================================================
+       ВІДБИТОК ПІСЛЯ ФОТО
+       ===================================================== */
+
+    setupFingerprint(
+
+      document.getElementById(
+        "fingerButton1"
+      ),
+
+      document.getElementById(
+        "progressRing1"
+      ),
+
+      3,
+
+      () => {
+
+
+        const success =
+          document.getElementById(
+            "success1"
+          );
+
+
+        success.style.display =
+          "block";
+
+
+        setTimeout(() => {
+
+          showPage(
+            document.getElementById(
+              "page3"
+            )
+          );
+
+        }, 2200);
+
+      }
+
+    );
+
+
+
+    /* =====================================================
+       ВІКТОРИНА
+       ===================================================== */
+
+    const questionNumber =
+      document.getElementById(
+        "questionNumber"
+      );
+
+    const questionText =
+      document.getElementById(
+        "questionText"
+      );
+
+    const answers =
+      document.getElementById(
+        "answers"
+      );
+
+    const prankMessage =
+      document.getElementById(
+        "prankMessage"
+      );
+
+    const questionBox =
+      document.getElementById(
+        "questionBox"
+      );
+
+    const quizFinished =
+      document.getElementById(
+        "quizFinished"
+      );
+
+
+    let currentQuestion = 1;
+
+
+
+    /* =====================================================
+       НАСТУПНЕ ПИТАННЯ
+       ===================================================== */
+
+    function nextQuestion() {
+
+      currentQuestion++;
+
+
+      prankMessage.classList.remove(
+        "show"
+      );
+
+
+      if (currentQuestion === 2) {
+
+
+        questionNumber.textContent =
+          "ПИТАННЯ 2 / 3";
+
+
+        questionText.textContent =
+          "ХТО СИЛЬНІШЕ ЛЮБИТЬ?";
+
+
+        answers.innerHTML = `
+
+          <button
+            class="answer-button"
+            data-answer="roma"
+          >
+            РОМА
+          </button>
+
+          <button
+            class="answer-button"
+            data-answer="tanketachka"
+          >
+            ТАНКЄТАЧКА
+          </button>
+
+        `;
+
+
+        addAnswerEvents();
+
+      }
+
+
+      else if (currentQuestion === 3) {
+
+
+        questionNumber.textContent =
+          "ПИТАННЯ 3 / 3";
+
+
+        questionText.textContent =
+          "ТИ МЕНЕ ЛЮБИШ?";
+
+
+        answers.innerHTML = `
+
+          <button
+            class="answer-button"
+            data-answer="no"
+          >
+            НІ
+          </button>
+
+          <button
+            class="answer-button"
+            data-answer="yes"
+          >
+            ТАК ❤️
+          </button>
+
+        `;
+
+
+        addAnswerEvents();
+
+      }
+
+    }
+
+
+
+    /* =====================================================
+       ОБРОБКА ВІДПОВІДІ
+       ===================================================== */
+
+    function addAnswerEvents() {
+
+
+      const buttons =
+        answers.querySelectorAll(
+          ".answer-button"
+        );
+
+
+      buttons.forEach(button => {
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+
+            const answer =
+              button.dataset.answer;
+
+
+
+            /* =============================================
+               ПИТАННЯ 1
+               ============================================= */
+
+            if (
+              currentQuestion === 1
+            ) {
+
+
+              if (
+                answer === "correct"
+              ) {
+
+                button.classList.add(
+                  "correct"
+                );
+
+              }
+              else {
+
+                button.classList.add(
+                  "wrong"
+                );
+
+              }
+
+
+              buttons.forEach(b => {
+
+                b.disabled = true;
+
+              });
+
+
+              setTimeout(() => {
+
+                nextQuestion();
+
+              }, 1000);
+
+
+            }
+
+
+
+            /* =============================================
+               ПИТАННЯ 2 — ПРИКОЛ
+               ============================================= */
+
+            else if (
+              currentQuestion === 2
+            ) {
+
+
+              if (
+                answer ===
+                "tanketachka"
+              ) {
+
+
+                /*
+                  Червоний прикол
+                */
+
+                document.body
+                  .classList.add(
+                    "prank"
+                  );
+
+
+                button.classList.add(
+                  "wrong"
+                );
+
+
+                button.textContent =
+                  "ОТ ВРЄДІНА 😭";
+
+
+                prankMessage.classList.add(
+                  "show"
+                );
+
+
+                setTimeout(() => {
+
+                  document.body
+                    .classList.remove(
+                      "prank"
+                    );
+
+                }, 1000);
+
+
+                /*
+                  Після приколу
+                  все одно йдемо далі
+                */
+
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
+                setTimeout(() => {
+
+                  nextQuestion();
+
+                }, 1800);
+
+              }
+
+
+              else {
+
+
+                button.classList.add(
+                  "correct"
+                );
+
+
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
+                setTimeout(() => {
+
+                  nextQuestion();
+
+                }, 1000);
+
+              }
+
+            }
+
+
+
+            /* =============================================
+               ПИТАННЯ 3
+               ============================================= */
+
+            else if (
+              currentQuestion === 3
+            ) {
+
+
+              button.classList.add(
+                "correct"
+              );
+
+
+              buttons.forEach(b => {
+
+                b.disabled = true;
+
+              });
+
+
+              setTimeout(() => {
+
+
+                questionBox.style.display =
+                  "none";
+
+
+                quizFinished.style.display =
+                  "block";
+
+
+              }, 1000);
+
+            }
+
+          }
+
+        );
+
+      });
+
+    }
+
+
+
+    /* Початкові кнопки */
+
+    addAnswerEvents();
+
+
+
+    /* =====================================================
+       ФІНАЛЬНА АВТЕНТИФІКАЦІЯ
+       ===================================================== */
+
+    setupFingerprint(
+
+      document.getElementById(
+        "fingerButton2"
+      ),
+
+      document.getElementById(
+        "progressRing2"
+      ),
+
+      1,
+
+      () => {
+
+
+        /*
+          Після правильного утримання
+          одразу показуємо наступну сторінку
+        */
+
+        showPage(
+          document.getElementById(
+            "page4"
+          )
+        );
+
+
+        /*
+          Через 2 секунди —
+          заготовка під свідоцтво
+        */
+
+        setTimeout(() => {
+
+          showPage(
+            document.getElementById(
+              "page5"
+            )
+          );
 
         }, 2000);
 
       }
+
     );
-
-
-
-    /* =====================================================
-       ПЕРЕВІРКА ПАЛЬЦЕМ
-       ===================================================== */
-
-    const fingerButton =
-      document.getElementById(
-        "fingerButton"
-      );
-
-    const progressRing =
-      document.getElementById(
-        "progressRing"
-      );
-
-    const success =
-      document.getElementById(
-        "success"
-      );
-
-
-    let holdTimer = null;
-
-    let holding = false;
-
-    let startTime = 0;
-
-    let progressAnimation = null;
-
-
-    /* =====================================================
-       АНІМАЦІЯ КРУГА
-       ===================================================== */
-
-    function updateProgress() {
-
-      if (!holding) {
-        return;
-      }
-
-
-      const elapsed =
-        Date.now() - startTime;
-
-
-      const progress =
-        Math.min(
-          elapsed / 3000,
-          1
-        );
-
-
-      const degrees =
-        progress * 360;
-
-
-      progressRing.style.background =
-        `conic-gradient(
-          #777 0deg,
-          #777 ${degrees}deg,
-          transparent ${degrees}deg,
-          transparent 360deg
-        )`;
-
-
-      if (progress < 1) {
-
-        progressAnimation =
-          requestAnimationFrame(
-            updateProgress
-          );
-
-      }
-
-    }
-
-
-
-    /* =====================================================
-       ПОЧАТОК УТРИМАННЯ
-       ===================================================== */
-
-    function startHold(event) {
-
-      event.preventDefault();
-
-
-      if (holding) {
-        return;
-      }
-
-
-      holding = true;
-
-
-      startTime =
-        Date.now();
-
-
-      progressRing.style.display =
-        "block";
-
-
-      progressRing.style.background =
-        `conic-gradient(
-          #777 0deg,
-          transparent 0deg
-        )`;
-
-
-      updateProgress();
-
-
-      holdTimer =
-        setTimeout(() => {
-
-
-          holding = false;
-
-
-          cancelAnimationFrame(
-            progressAnimation
-          );
-
-
-          progressRing.style.display =
-            "none";
-
-
-          fingerButton.style.display =
-            "none";
-
-
-          success.style.display =
-            "block";
-
-
-        }, 3000);
-
-    }
-
-
-
-    /* =====================================================
-       ВІДПУСТИВ ПАЛЕЦЬ
-       ===================================================== */
-
-    function stopHold() {
-
-      if (!holding) {
-        return;
-      }
-
-
-      holding = false;
-
-
-      clearTimeout(
-        holdTimer
-      );
-
-
-      cancelAnimationFrame(
-        progressAnimation
-      );
-
-
-      progressRing.style.display =
-        "none";
-
-
-      progressRing.style.background =
-        `conic-gradient(
-          #777 0deg,
-          transparent 0deg
-        )`;
-
-    }
-
-
-
-    /* =====================================================
-       ПОДІЇ
-       ===================================================== */
-
-    fingerButton.addEventListener(
-      "pointerdown",
-      startHold
-    );
-
-
-    fingerButton.addEventListener(
-      "pointerup",
-      stopHold
-    );
-
-
-    fingerButton.addEventListener(
-      "pointercancel",
-      stopHold
-    );
-
-
-    fingerButton.addEventListener(
-      "pointerleave",
-      stopHold
-    );
-
 
   </script>
 
