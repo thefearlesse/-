@@ -31,158 +31,105 @@
     .me {
       width: min(330px, 80vw);
       margin-top: 10px;
-
-      /* Прибирає білий фон картинки візуально */
       mix-blend-mode: darken;
     }
 
-    /* РУХОМИЙ ПІЛІВЄЄЄЄЄЄЄТ */
+
+    /* ПІЛІВЄЄЄЄЄЄЄЄЄТ */
 
     .hello {
+      position: relative;
       width: 100%;
+      height: 95px;
       overflow: hidden;
-      margin: 10px 0 25px;
-      white-space: nowrap;
+      margin: 5px 0 20px;
     }
 
     .hello-text {
-      display: inline-block;
+      position: absolute;
+      white-space: nowrap;
+
       font-size: clamp(32px, 9vw, 65px);
       font-weight: 900;
       color: #111;
 
-      animation: moveText 3s linear infinite;
+      animation:
+        moveText 3.2s linear infinite,
+        bounceText 0.55s ease-in-out infinite alternate;
     }
 
     @keyframes moveText {
       from {
-        transform: translateX(100%);
+        left: 100%;
       }
 
       to {
-        transform: translateX(-100%);
+        left: -120%;
+      }
+    }
+
+    @keyframes bounceText {
+      from {
+        transform: translateY(5px) rotate(-2deg);
+      }
+
+      to {
+        transform: translateY(-8px) rotate(2deg);
       }
     }
 
 
-    /* ТЕКСТ НАД КНОПКОЮ */
+    /* ЛІТАЮЧІ СМАЙЛИКИ */
+
+    .decor {
+      position: absolute;
+      pointer-events: none;
+      font-size: 25px;
+      animation: floatAround 2.5s ease-in-out infinite alternate;
+    }
+
+    .d1 {
+      left: 8%;
+      top: 5px;
+      animation-delay: 0s;
+    }
+
+    .d2 {
+      right: 8%;
+      top: 15px;
+      animation-delay: 0.5s;
+    }
+
+    .d3 {
+      left: 18%;
+      bottom: 5px;
+      animation-delay: 0.8s;
+    }
+
+    .d4 {
+      right: 18%;
+      bottom: 0;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes floatAround {
+      from {
+        transform: translateY(8px) rotate(-10deg);
+      }
+
+      to {
+        transform: translateY(-12px) rotate(12deg);
+      }
+    }
+
+
+    /* ТЕКСТ */
 
     .reply-text {
       font-size: clamp(18px, 5vw, 30px);
       font-weight: 800;
-      margin: 15px 0 8px;
+      margin: 5px 0 12px;
     }
 
 
-    /* КНОПКА */
-
-    .hand {
-      width: 120px;
-      height: 120px;
-
-      border: 5px solid #888;
-      background: #FFE4D1;
-
-      font-size: 70px;
-
-      cursor: pointer;
-
-      border-radius: 50%;
-
-      box-shadow:
-        0 7px 0 #666,
-        0 10px 20px rgba(0, 0, 0, 0.25);
-
-      transition:
-        transform 0.12s,
-        box-shadow 0.12s;
-
-      touch-action: manipulation;
-    }
-
-    .hand:active {
-      transform: translateY(6px) scale(0.95);
-
-      box-shadow:
-        0 2px 0 #666,
-        0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-
-  </style>
-</head>
-
-
-<body>
-
-  <div class="page">
-
-    <!-- Твій чувак -->
-
-    <img
-      class="me"
-      id="me"
-      src="me1.png"
-      alt="Я махаю"
-    >
-
-
-    <!-- Рухомий текст -->
-
-    <div class="hello">
-
-      <div class="hello-text">
-        ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ
-      </div>
-
-    </div>
-
-
-    <!-- Текст над кнопкою -->
-
-    <div class="reply-text">
-      ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ У ВІДПОВІДЬ
-    </div>
-
-
-    <!-- КНОПКА -->
-
-    <button class="hand" onclick="helloBack()">
-      👋
-    </button>
-
-  </div>
-
-
-  <script>
-
-    // ШВИДКЕ МАХАННЯ
-
-    const me = document.getElementById("me");
-
-    let frame = 1;
-
-    setInterval(() => {
-
-      frame = frame === 1 ? 2 : 1;
-
-      me.src = `me${frame}.png`;
-
-    }, 140);
-
-
-    // РЕАКЦІЯ НА НАТИСКАННЯ
-
-    function helloBack() {
-
-      document.querySelector(".reply-text").textContent =
-        "ОГО, ВІДПОВІЛА 😭❤️";
-
-      document.querySelector(".hand").textContent =
-        "👋🥹";
-
-    }
-
-  </script>
-
-</body>
-</html>
+    /*
