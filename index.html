@@ -19,15 +19,8 @@
       font-family: Arial, sans-serif;
       text-align: center;
       overflow-x: hidden;
-      transition:
-        background 0.15s,
-        filter 0.15s;
+      transition: background 0.15s, filter 0.15s;
     }
-
-
-    /* =====================================================
-       ЗАГАЛЬНЕ
-       ===================================================== */
 
     .page {
       min-height: 100vh;
@@ -46,13 +39,11 @@
       align-items: center;
     }
 
-
     .me {
       width: min(330px, 80vw);
       margin-top: 10px;
       mix-blend-mode: darken;
     }
-
 
     .hello {
       position: relative;
@@ -61,7 +52,6 @@
       overflow: hidden;
       margin: 5px 0 15px;
     }
-
 
     .hello-text {
       position: absolute;
@@ -74,81 +64,56 @@
         bounceText 0.55s ease-in-out infinite alternate;
     }
 
-
     @keyframes moveText {
-      from {
-        left: 100%;
-      }
-
-      to {
-        left: -120%;
-      }
+      from { left: 100%; }
+      to { left: -120%; }
     }
-
 
     @keyframes bounceText {
       from {
-        transform:
-          translateY(5px)
-          rotate(-2deg);
+        transform: translateY(5px) rotate(-2deg);
       }
-
       to {
-        transform:
-          translateY(-8px)
-          rotate(2deg);
+        transform: translateY(-8px) rotate(2deg);
       }
     }
-
 
     .decor {
       position: absolute;
       pointer-events: none;
       font-size: 25px;
-      animation:
-        floatAround 2.5s ease-in-out infinite alternate;
+      animation: floatAround 2.5s ease-in-out infinite alternate;
       z-index: 2;
     }
-
 
     .d1 {
       left: 8%;
       top: 5px;
     }
 
-
     .d2 {
       right: 8%;
       top: 15px;
     }
-
 
     .d3 {
       left: 18%;
       bottom: 5px;
     }
 
-
     .d4 {
       right: 18%;
       bottom: 0;
     }
 
-
     @keyframes floatAround {
       from {
-        transform:
-          translateY(8px)
-          rotate(-10deg);
+        transform: translateY(8px) rotate(-10deg);
       }
-
       to {
-        transform:
-          translateY(-12px)
-          rotate(12deg);
+        transform: translateY(-12px) rotate(12deg);
       }
     }
-
 
     .reply-text {
       font-size: clamp(18px, 5vw, 30px);
@@ -156,7 +121,6 @@
       margin: 5px 0 12px;
       min-height: 38px;
     }
-
 
     .hand {
       width: 120px;
@@ -169,23 +133,16 @@
       box-shadow:
         0 7px 0 #666,
         0 10px 20px rgba(0,0,0,0.25);
-      transition:
-        transform 0.12s,
-        box-shadow 0.12s;
+      transition: transform 0.12s, box-shadow 0.12s;
       touch-action: manipulation;
     }
 
-
     .hand:active {
-      transform:
-        translateY(6px)
-        scale(0.95);
-
+      transform: translateY(6px) scale(0.95);
       box-shadow:
         0 2px 0 #666,
         0 5px 10px rgba(0,0,0,0.2);
     }
-
 
 
     /* =====================================================
@@ -199,36 +156,22 @@
       align-items: center;
     }
 
-
     .page2-title {
       font-size: clamp(30px, 9vw, 55px);
       font-weight: 900;
       margin: 5px 0 25px;
       line-height: 1.05;
-      animation:
-        titleWiggle 1.2s ease-in-out infinite alternate;
+      animation: titleWiggle 1.2s ease-in-out infinite alternate;
     }
-
 
     @keyframes titleWiggle {
       from {
-        transform:
-          rotate(-2deg)
-          scale(1);
+        transform: rotate(-2deg) scale(1);
       }
-
       to {
-        transform:
-          rotate(2deg)
-          scale(1.04);
+        transform: rotate(2deg) scale(1.04);
       }
     }
-
-
-
-    /* =====================================================
-       ФОТО
-       ===================================================== */
 
     .photos-area {
       width: 100%;
@@ -236,13 +179,11 @@
       margin: 0 auto 35px;
     }
 
-
     .rope-row {
       position: relative;
       height: 170px;
       margin-bottom: 5px;
     }
-
 
     .rope {
       position: absolute;
@@ -251,37 +192,24 @@
       height: 45px;
       border-bottom: 7px solid #8B6548;
       border-radius: 0 0 50% 50%;
-      filter:
-        drop-shadow(
-          0 3px 2px
-          rgba(0,0,0,0.15)
-        );
+      filter: drop-shadow(0 3px 2px rgba(0,0,0,0.15));
       z-index: 1;
     }
-
 
     .rope1 {
       top: 15px;
       transform: rotate(2deg);
     }
 
-
     .rope2 {
       top: 20px;
       transform: rotate(-2deg);
     }
 
-
     .rope3 {
       top: 12px;
       transform: rotate(2deg);
     }
-
-
-
-    /* =====================================================
-       ФОТОГРАФІЇ
-       ===================================================== */
 
     .photo {
       position: absolute;
@@ -291,226 +219,138 @@
       background: white;
       padding: 5px 5px 14px;
       border-radius: 2px;
-      box-shadow:
-        0 5px 10px
-        rgba(0,0,0,0.22);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.22);
       transform-origin: top center;
       z-index: 2;
     }
-
 
     .p1 {
       left: 7%;
       top: 43px;
       --angle: -7deg;
-      animation:
-        swing1 3.2s ease-in-out infinite alternate;
+      animation: swing1 3.2s ease-in-out infinite alternate;
     }
-
 
     .p2 {
       left: 36%;
       top: 48px;
       --angle: 5deg;
-      animation:
-        swing2 3.5s ease-in-out infinite alternate;
+      animation: swing2 3.5s ease-in-out infinite alternate;
     }
-
 
     .p3 {
       right: 7%;
       top: 42px;
       --angle: -4deg;
-      animation:
-        swing3 3.1s ease-in-out infinite alternate;
+      animation: swing3 3.1s ease-in-out infinite alternate;
     }
-
 
     .p4 {
       left: 18%;
       top: 47px;
       --angle: 6deg;
-      animation:
-        swing4 3.6s ease-in-out infinite alternate;
+      animation: swing4 3.6s ease-in-out infinite alternate;
     }
-
 
     .p5 {
       right: 18%;
       top: 43px;
       --angle: -6deg;
-      animation:
-        swing5 3.3s ease-in-out infinite alternate;
+      animation: swing5 3.3s ease-in-out infinite alternate;
     }
-
 
     .p6 {
       left: 7%;
       top: 45px;
       --angle: 5deg;
-      animation:
-        swing6 3.4s ease-in-out infinite alternate;
+      animation: swing6 3.4s ease-in-out infinite alternate;
     }
-
 
     .p7 {
       left: 36%;
       top: 48px;
       --angle: -5deg;
-      animation:
-        swing7 3.7s ease-in-out infinite alternate;
+      animation: swing7 3.7s ease-in-out infinite alternate;
     }
-
 
     .p8 {
       right: 7%;
       top: 43px;
       --angle: 7deg;
-      animation:
-        swing8 3.2s ease-in-out infinite alternate;
+      animation: swing8 3.2s ease-in-out infinite alternate;
     }
-
 
     @keyframes swing1 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
     }
-
 
     @keyframes swing2 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
     }
-
 
     @keyframes swing3 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
     }
-
 
     @keyframes swing4 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
     }
-
 
     @keyframes swing5 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
     }
-
 
     @keyframes swing6 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
     }
-
 
     @keyframes swing7 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
     }
-
 
     @keyframes swing8 {
       from {
-        transform:
-          rotate(
-            calc(var(--angle) + 2deg)
-          );
+        transform: rotate(calc(var(--angle) + 2deg));
       }
-
       to {
-        transform:
-          rotate(
-            calc(var(--angle) - 2deg)
-          );
+        transform: rotate(calc(var(--angle) - 2deg));
       }
     }
-
-
-
-    /* =====================================================
-       ПРИЩІПКИ
-       ===================================================== */
 
     .clip {
       position: absolute;
@@ -520,11 +360,8 @@
       border: 2px solid #777;
       border-radius: 5px 5px 8px 8px;
       z-index: 5;
-      box-shadow:
-        0 2px 3px
-        rgba(0,0,0,0.2);
+      box-shadow: 0 2px 3px rgba(0,0,0,0.2);
     }
-
 
     .clip::before {
       content: "";
@@ -538,9 +375,8 @@
     }
 
 
-
     /* =====================================================
-       ПЕРЕВІРКА ПІСЛЯ ФОТО
+       ВІДБИТОК
        ===================================================== */
 
     .captcha-title {
@@ -548,7 +384,6 @@
       font-weight: 900;
       margin: 5px 0 20px;
     }
-
 
     .finger-button {
       position: relative;
@@ -560,8 +395,7 @@
       cursor: pointer;
       box-shadow:
         0 7px 0 #666,
-        0 10px 20px
-        rgba(0,0,0,0.25);
+        0 10px 20px rgba(0,0,0,0.25);
       user-select: none;
       -webkit-user-select: none;
       touch-action: none;
@@ -570,15 +404,12 @@
       justify-content: center;
     }
 
-
     .finger-button:active {
       transform: translateY(5px);
       box-shadow:
         0 2px 0 #666,
-        0 5px 10px
-        rgba(0,0,0,0.2);
+        0 5px 10px rgba(0,0,0,0.2);
     }
-
 
     .fingerprint {
       width: 72px;
@@ -588,7 +419,6 @@
       -webkit-user-drag: none;
       pointer-events: none;
     }
-
 
     .progress-ring {
       position: absolute;
@@ -601,12 +431,14 @@
           transparent 0deg
         );
       pointer-events: none;
+
       -webkit-mask:
         radial-gradient(
           farthest-side,
           transparent calc(100% - 7px),
           #000 calc(100% - 6px)
         );
+
       mask:
         radial-gradient(
           farthest-side,
@@ -615,25 +447,16 @@
         );
     }
 
-
-
-    /* =====================================================
-       УСПІХ
-       ===================================================== */
-
     .success {
       display: none;
       margin-top: 25px;
-      animation:
-        successPop .5s ease-out;
+      animation: successPop .5s ease-out;
     }
-
 
     .success-check {
       font-size: 70px;
       font-weight: 900;
     }
-
 
     .success-text {
       font-size: clamp(22px, 6vw, 34px);
@@ -641,20 +464,17 @@
       line-height: 1.15;
     }
 
-
     .success-love {
       margin-top: 12px;
       font-size: clamp(20px, 5vw, 30px);
       font-weight: 800;
     }
 
-
     @keyframes successPop {
       from {
         transform: scale(.5);
         opacity: 0;
       }
-
       to {
         transform: scale(1);
         opacity: 1;
@@ -662,9 +482,8 @@
     }
 
 
-
     /* =====================================================
-       ТРЕТЯ СТОРІНКА — ВІКТОРИНА
+       ТРЕТЯ — ВІКТОРИНА
        ===================================================== */
 
     #page3 {
@@ -675,26 +494,20 @@
       justify-content: flex-start;
     }
 
-
     .quiz-title {
       font-size: clamp(30px, 8vw, 48px);
       font-weight: 900;
       margin: 15px 0 30px;
     }
 
-
     .question-box {
       width: 100%;
       max-width: 500px;
       padding: 25px 18px 30px;
-      background:
-        rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.45);
       border-radius: 25px;
-      box-shadow:
-        0 8px 20px
-        rgba(0,0,0,0.12);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
-
 
     .question-number {
       font-size: 17px;
@@ -703,7 +516,6 @@
       margin-bottom: 12px;
     }
 
-
     .question-text {
       font-size: clamp(25px, 7vw, 36px);
       font-weight: 900;
@@ -711,13 +523,11 @@
       margin-bottom: 25px;
     }
 
-
     .answers {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
-
 
     .answer-button {
       width: 100%;
@@ -729,83 +539,37 @@
       font-size: 21px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow:
-        0 5px 0 #d0b8aa;
+      box-shadow: 0 5px 0 #d0b8aa;
       transition:
         transform .12s,
         background .15s,
         color .15s;
     }
 
-
     .answer-button:active {
       transform: translateY(4px);
-      box-shadow:
-        0 1px 0 #d0b8aa;
+      box-shadow: 0 1px 0 #d0b8aa;
     }
-
 
     .answer-button.correct {
       background: #75d66f;
       color: white;
     }
 
-
     .answer-button.wrong {
       background: #ff5252;
       color: white;
-      animation: wrongShake .35s ease;
     }
-
-
-    @keyframes wrongShake {
-      0% {
-        transform: translateX(0);
-      }
-
-      25% {
-        transform: translateX(-7px);
-      }
-
-      50% {
-        transform: translateX(7px);
-      }
-
-      75% {
-        transform: translateX(-5px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-
-
-    /* =====================================================
-       ПРИКОЛ З ТАНКЄТАЧКОЮ
-       ===================================================== */
 
     body.prank {
-      animation:
-        redFlash .22s linear 4;
+      animation: redFlash .22s linear 4;
     }
-
 
     @keyframes redFlash {
-      0% {
-        background: #FFE4D1;
-      }
-
-      50% {
-        background: #ff5b5b;
-      }
-
-      100% {
-        background: #FFE4D1;
-      }
+      0% { background: #FFE4D1; }
+      50% { background: #ff5b5b; }
+      100% { background: #FFE4D1; }
     }
-
 
     .prank-message {
       display: none;
@@ -813,119 +577,21 @@
       font-size: clamp(25px, 7vw, 38px);
       font-weight: 900;
       color: #e00000;
-      animation:
-        shake .45s ease-in-out;
+      animation: shake .45s ease-in-out;
     }
-
 
     .prank-message.show {
       display: block;
     }
 
-
     @keyframes shake {
-      0% {
-        transform: translateX(0);
-      }
-
-      20% {
-        transform: translateX(-10px);
-      }
-
-      40% {
-        transform: translateX(10px);
-      }
-
-      60% {
-        transform: translateX(-7px);
-      }
-
-      80% {
-        transform: translateX(7px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-10px); }
+      40% { transform: translateX(10px); }
+      60% { transform: translateX(-7px); }
+      80% { transform: translateX(7px); }
+      100% { transform: translateX(0); }
     }
-
-
-
-    /* =====================================================
-       ВАРІАНТ "ОДНАКОВО"
-       ===================================================== */
-
-    .equal-answer {
-      animation:
-        equalAppear .5s ease-out;
-    }
-
-
-    @keyframes equalAppear {
-      from {
-        opacity: 0;
-        transform: scale(.7);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-
-
-    /* =====================================================
-       СЕРЦЯ ТА КОНФЕТІ
-       ===================================================== */
-
-    #celebration {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9999;
-      overflow: hidden;
-      display: none;
-    }
-
-
-    .celebration-item {
-      position: absolute;
-      top: -60px;
-      animation:
-        celebrationFall linear forwards;
-    }
-
-
-    .celebration-heart {
-      font-size: 35px;
-    }
-
-
-    .celebration-confetti {
-      width: 12px;
-      height: 22px;
-      background: #111;
-      border-radius: 3px;
-    }
-
-
-    @keyframes celebrationFall {
-      from {
-        transform:
-          translateY(0)
-          rotate(0deg);
-        opacity: 1;
-      }
-
-      to {
-        transform:
-          translateY(115vh)
-          rotate(720deg);
-        opacity: 0;
-      }
-    }
-
 
 
     /* =====================================================
@@ -935,86 +601,54 @@
     #sadPage {
       display: none;
       min-height: 100vh;
-      padding: 30px 15px;
-      background:
-        linear-gradient(
-          #7f8999,
-          #566171
-        );
-      color: white;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      background: #9da8b8;
+      color: white;
       position: relative;
+      overflow: hidden;
     }
 
-
-    .sad-title {
-      font-size: clamp(35px, 10vw, 60px);
-      font-weight: 900;
-      margin-bottom: 20px;
-      animation:
-        sadShake 1.2s ease-in-out infinite alternate;
-    }
-
-
-    .sad-text {
-      font-size: clamp(28px, 8vw, 48px);
-      font-weight: 900;
-      line-height: 1.1;
-      z-index: 5;
-    }
-
-
-    .rain {
+    .sad-rain {
       position: absolute;
       inset: 0;
-      overflow: hidden;
       pointer-events: none;
+      overflow: hidden;
     }
 
-
-    .raindrop {
+    .rain-drop {
       position: absolute;
       top: -50px;
-      color: #d9e8ff;
-      font-size: 28px;
-      animation:
-        rainFall linear infinite;
-      opacity: .8;
+      font-size: 25px;
+      animation: rainFall linear infinite;
+      opacity: .75;
     }
-
 
     @keyframes rainFall {
       from {
-        transform:
-          translateY(-60px)
-          rotate(10deg);
+        transform: translateY(-60px) rotate(10deg);
       }
-
       to {
-        transform:
-          translateY(110vh)
-          rotate(10deg);
+        transform: translateY(110vh) rotate(10deg);
       }
     }
 
-
-    @keyframes sadShake {
-      from {
-        transform:
-          translateX(-5px)
-          rotate(-1deg);
-      }
-
-      to {
-        transform:
-          translateX(5px)
-          rotate(1deg);
-      }
+    .sad-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
     }
 
+    .sad-face {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+
+    .sad-title {
+      font-size: clamp(35px, 10vw, 55px);
+      font-weight: 900;
+    }
 
 
     /* =====================================================
@@ -1028,14 +662,12 @@
       padding: 30px 15px;
     }
 
-
     .quiz-finished-title {
       font-size: clamp(28px, 8vw, 43px);
       font-weight: 900;
       line-height: 1.1;
       margin-bottom: 20px;
     }
-
 
     .quiz-finished-text {
       font-size: clamp(18px, 5vw, 25px);
@@ -1044,10 +676,32 @@
       margin-bottom: 35px;
     }
 
+    .next-button {
+      width: 145px;
+      height: 70px;
+      border: none;
+      border-radius: 20px;
+      background: #72b7ff;
+      color: white;
+      font-size: 25px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow:
+        0 7px 0 #4c8fd0,
+        0 10px 20px rgba(0,0,0,.2);
+      transition: .12s;
+    }
+
+    .next-button:active {
+      transform: translateY(5px);
+      box-shadow:
+        0 2px 0 #4c8fd0,
+        0 5px 10px rgba(0,0,0,.15);
+    }
 
 
     /* =====================================================
-       ЧЕТВЕРТА СТОРІНКА
+       СТОРІНКА "ЗАТИСНИ"
        ===================================================== */
 
     #page4 {
@@ -1058,26 +712,47 @@
       justify-content: center;
     }
 
-
-    .auth-title {
-      font-size: clamp(28px, 8vw, 45px);
+    .hold-title {
+      font-size: clamp(30px, 8vw, 45px);
       font-weight: 900;
       line-height: 1.1;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
-
-    .auth-text {
+    .hold-text {
       font-size: clamp(18px, 5vw, 25px);
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: 30px;
     }
 
+    .hold-button {
+      width: 180px;
+      height: 80px;
+      border: none;
+      border-radius: 25px;
+      background: #72b7ff;
+      color: white;
+      font-size: 25px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow:
+        0 8px 0 #4c8fd0,
+        0 12px 25px rgba(0,0,0,.2);
+      touch-action: none;
+      transition: .12s;
+    }
+
+    .hold-button:active {
+      transform: translateY(6px);
+      box-shadow:
+        0 2px 0 #4c8fd0,
+        0 5px 12px rgba(0,0,0,.15);
+    }
 
 
     /* =====================================================
-       П'ЯТА СТОРІНКА
+       СВІДОЦТВО
        ===================================================== */
 
     #page5 {
@@ -1086,35 +761,100 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
     }
 
-
-    .certificate-placeholder {
+    .certificate {
       width: 92%;
-      max-width: 600px;
-      padding: 40px 20px;
+      max-width: 620px;
+      padding: 35px 25px 40px;
       background: #fffaf4;
       border: 5px solid #8B6548;
-      box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.18);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      position: relative;
+      z-index: 5;
     }
 
-
-    .certificate-placeholder h1 {
+    .certificate-title {
       font-size: clamp(28px, 8vw, 45px);
-      margin: 0 0 20px;
+      font-weight: 900;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .certificate-text {
+      font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+      font-size: clamp(17px, 4.7vw, 25px);
+      font-weight: 700;
+      line-height: 1.5;
+      transform: rotate(-1deg);
+      margin: 15px 5px 35px;
+    }
+
+    .certificate-fingerprint {
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
+      margin-top: 5px;
+    }
+
+    .signature-line {
+      width: 150px;
+      border-bottom: 3px solid #222;
+      margin: 8px auto 7px;
+    }
+
+    .signature-text {
+      font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+      font-size: 25px;
+      font-weight: 900;
     }
 
 
-    .certificate-placeholder p {
-      font-size: clamp(18px, 5vw, 25px);
-      font-weight: 700;
-      line-height: 1.4;
+    /* =====================================================
+       КОНФЕТІ ПІСЛЯ СВІДОЦТВА
+       ===================================================== */
+
+    #celebration {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 20;
+      display: none;
+    }
+
+    .celebration-item {
+      position: absolute;
+      bottom: -60px;
+      animation: flyUp linear forwards;
+      will-change: transform;
+    }
+
+    @keyframes flyUp {
+      0% {
+        transform:
+          translateY(0)
+          rotate(0deg)
+          scale(.8);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      100% {
+        transform:
+          translateY(-115vh)
+          rotate(720deg)
+          scale(1.2);
+        opacity: 1;
+      }
     }
 
   </style>
-
 </head>
 
 
@@ -1125,10 +865,7 @@
        СТОРІНКА 1
        ===================================================== -->
 
-  <div
-    id="page1"
-    class="page"
-  >
+  <div id="page1" class="page">
 
     <img
       class="me"
@@ -1150,19 +887,11 @@
 
     </div>
 
-
-    <div
-      class="reply-text"
-      id="replyText"
-    >
+    <div class="reply-text" id="replyText">
       ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ У ВІДПОВІДЬ
     </div>
 
-
-    <button
-      class="hand"
-      id="helloButton"
-    >
+    <button class="hand" id="helloButton">
       👋
     </button>
 
@@ -1174,15 +903,11 @@
        СТОРІНКА 2
        ===================================================== -->
 
-  <div
-    id="page2"
-    class="page"
-  >
+  <div id="page2" class="page">
 
     <div class="page2-title">
       ФОТАЧКІІІІІ 📸
     </div>
-
 
     <div class="photos-area">
 
@@ -1190,40 +915,17 @@
 
         <div class="rope rope1"></div>
 
-        <img
-          class="photo p1"
-          src="photo1.jpg"
-          alt="Фото 1"
-        >
+        <img class="photo p1" src="photo1.jpg" alt="Фото 1">
 
-        <div
-          class="clip"
-          style="left: 10%; top: 32px;"
-        ></div>
+        <div class="clip" style="left:10%;top:32px;"></div>
 
+        <img class="photo p2" src="photo2.jpg" alt="Фото 2">
 
-        <img
-          class="photo p2"
-          src="photo2.jpg"
-          alt="Фото 2"
-        >
+        <div class="clip" style="left:39%;top:37px;"></div>
 
-        <div
-          class="clip"
-          style="left: 39%; top: 37px;"
-        ></div>
+        <img class="photo p3" src="photo3.jpg" alt="Фото 3">
 
-
-        <img
-          class="photo p3"
-          src="photo3.jpg"
-          alt="Фото 3"
-        >
-
-        <div
-          class="clip"
-          style="right: 10%; top: 32px;"
-        ></div>
+        <div class="clip" style="right:10%;top:32px;"></div>
 
       </div>
 
@@ -1232,28 +934,13 @@
 
         <div class="rope rope2"></div>
 
-        <img
-          class="photo p4"
-          src="photo4.jpg"
-          alt="Фото 4"
-        >
+        <img class="photo p4" src="photo4.jpg" alt="Фото 4">
 
-        <div
-          class="clip"
-          style="left: 21%; top: 36px;"
-        ></div>
+        <div class="clip" style="left:21%;top:36px;"></div>
 
+        <img class="photo p5" src="photo5.jpg" alt="Фото 5">
 
-        <img
-          class="photo p5"
-          src="photo5.jpg"
-          alt="Фото 5"
-        >
-
-        <div
-          class="clip"
-          style="right: 21%; top: 32px;"
-        ></div>
+        <div class="clip" style="right:21%;top:32px;"></div>
 
       </div>
 
@@ -1262,58 +949,28 @@
 
         <div class="rope rope3"></div>
 
-        <img
-          class="photo p6"
-          src="photo6.jpg"
-          alt="Фото 6"
-        >
+        <img class="photo p6" src="photo6.jpg" alt="Фото 6">
 
-        <div
-          class="clip"
-          style="left: 10%; top: 34px;"
-        ></div>
+        <div class="clip" style="left:10%;top:34px;"></div>
 
+        <img class="photo p7" src="photo7.jpg" alt="Фото 7">
 
-        <img
-          class="photo p7"
-          src="photo7.jpg"
-          alt="Фото 7"
-        >
+        <div class="clip" style="left:39%;top:37px;"></div>
 
-        <div
-          class="clip"
-          style="left: 39%; top: 37px;"
-        ></div>
+        <img class="photo p8" src="photo8.jpg" alt="Фото 8">
 
-
-        <img
-          class="photo p8"
-          src="photo8.jpg"
-          alt="Фото 8"
-        >
-
-        <div
-          class="clip"
-          style="right: 10%; top: 32px;"
-        ></div>
+        <div class="clip" style="right:10%;top:32px;"></div>
 
       </div>
 
     </div>
 
-
     <div class="captcha-title">
-
       ПЕРЕВІРКА НА<br>
       КОХАНУ ТАНКЄТАЧКУ ❤️
-
     </div>
 
-
-    <button
-      class="finger-button"
-      id="fingerButton1"
-    >
+    <button class="finger-button" id="fingerButton1">
 
       <img
         class="fingerprint"
@@ -1328,11 +985,7 @@
 
     </button>
 
-
-    <div
-      class="success"
-      id="success1"
-    >
+    <div class="success" id="success1">
 
       <div class="success-check">
         ✓
@@ -1356,119 +1009,60 @@
        СТОРІНКА 3 — ВІКТОРИНА
        ===================================================== -->
 
-  <div
-    id="page3"
-    class="page"
-  >
+  <div id="page3" class="page">
 
     <div class="quiz-title">
       МІНІ-ВІКТОРИНА 😈
     </div>
 
+    <div class="question-box" id="questionBox">
 
-    <div
-      class="question-box"
-      id="questionBox"
-    >
-
-      <div
-        class="question-number"
-        id="questionNumber"
-      >
+      <div class="question-number" id="questionNumber">
         ПИТАННЯ 1 / 3
       </div>
 
-
-      <div
-        class="question-text"
-        id="questionText"
-      >
+      <div class="question-text" id="questionText">
         КОЛИ МИ ПОЧАЛИ ЗУСТРІЧАТИСЬ?
       </div>
 
+      <div class="answers" id="answers">
 
-      <div
-        class="answers"
-        id="answers"
-      >
-
-        <button
-          class="answer-button"
-          data-answer="wrong"
-        >
+        <button class="answer-button" data-answer="wrong">
           15 серпня
         </button>
 
-
-        <button
-          class="answer-button"
-          data-answer="correct"
-        >
+        <button class="answer-button" data-answer="correct">
           16 серпня
         </button>
 
-
-        <button
-          class="answer-button"
-          data-answer="wrong"
-        >
+        <button class="answer-button" data-answer="wrong">
           13 серпня
         </button>
 
       </div>
 
-
-      <div
-        class="prank-message"
-        id="prankMessage"
-      >
+      <div class="prank-message" id="prankMessage">
         ОТ ВРЄДІНА 😭
       </div>
 
     </div>
 
 
-
-    <div
-      class="quiz-finished"
-      id="quizFinished"
-    >
+    <div class="quiz-finished" id="quizFinished">
 
       <div class="quiz-finished-title">
         ВІТАЄМО! 🎉
       </div>
 
-
       <div class="quiz-finished-text">
-
         ВИ УСПІШНО ЗАВЕРШИЛИ ОПИТУВАННЯ ❤️<br><br>
 
-        ТЕПЕР ПРОЙДІТЬ АВТЕНТИФІКАЦІЮ,<br>
-
-        ЩОБ ПІДТВЕРДИТИ,<br>
-
-        ЧИ ВИ ТОЧНО ТАНКЄТОЧКА 😈
-
+        ТЕПЕР ПЕРЕЙДІТЬ ДАЛІ,<br>
+        ТАМ БУДЕ ЩЕ ЩОСЬ ВАЖЛИВЕ 😈
       </div>
 
-
-      <button
-        class="finger-button"
-        id="fingerButton2"
-      >
-
-        <img
-          class="fingerprint"
-          src="fingerprint.png"
-          alt="Відбиток пальця"
-        >
-
-
-        <div
-          class="progress-ring"
-          id="progressRing2"
-        ></div>
-
+      <button class="next-button" id="nextButton">
+        ДАЛІ 💙
       </button>
 
     </div>
@@ -1478,24 +1072,23 @@
 
 
   <!-- =====================================================
-       СУМНА СТОРІНКА
+       СУМНИЙ ФІНАЛ
        ===================================================== -->
 
-  <div
-    id="sadPage"
-    class="page"
-  >
+  <div id="sadPage" class="page">
 
-    <div class="rain" id="rain"></div>
+    <div class="sad-rain" id="sadRain"></div>
 
+    <div class="sad-content">
 
-    <div class="sad-title">
-      😭 😢 😭
-    </div>
+      <div class="sad-face">
+        😭😢🥲
+      </div>
 
+      <div class="sad-title">
+        ПАКА Я ПЛАКАТЬ 😭
+      </div>
 
-    <div class="sad-text">
-      ПАКА Я ПЛАКАТЬ
     </div>
 
   </div>
@@ -1503,93 +1096,78 @@
 
 
   <!-- =====================================================
-       СЕРЦЯ / КОНФЕТІ
+       СТОРІНКА "ЗАТИСНИ ЦЮ КНОПОЧКУ"
+       ===================================================== -->
+
+  <div id="page4" class="page">
+
+    <div class="hold-title">
+      ЩЕ ОДНА<br>
+      ПЕРЕВІРКА 😈
+    </div>
+
+    <div class="hold-text">
+      ЗАТИСНИ ЦЮ КНОПОЧКУ ❤️
+    </div>
+
+    <button class="hold-button" id="holdButton">
+      ЗАТИСНУТИ
+    </button>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       СТОРІНКА 5 — СВІДОЦТВО
+       ===================================================== -->
+
+  <div id="page5" class="page">
+
+    <div class="certificate">
+
+      <div class="certificate-title">
+        СВІДОЦТВО<br>
+        ПРО ШЛЮБ
+      </div>
+
+      <div class="certificate-text">
+
+        цей документ офіційно підтверджує, що ми завжди завжди будемо разом, і в щасті, і в негаразді, щоб не сталось і можемо довірити одне одному все. УРАААААААА
+
+      </div>
+
+      <img
+        class="certificate-fingerprint"
+        src="fingerprint.png"
+        alt="Відбиток пальця"
+      >
+
+      <div class="signature-line"></div>
+
+      <div class="signature-text">
+        ти ❤️
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       КОНФЕТІ
        ===================================================== -->
 
   <div id="celebration"></div>
 
 
 
-  <!-- =====================================================
-       СТОРІНКА 4
-       ===================================================== -->
-
-  <div
-    id="page4"
-    class="page"
-  >
-
-    <div class="auth-title">
-
-      АВТЕНТИФІКАЦІЮ<br>
-      ПРОЙДЕНО ✓
-
-    </div>
-
-
-    <div class="auth-text">
-
-      ТАНКЄТОЧКА ПІДТВЕРДЖЕНА ❤️<br><br>
-
-      ПЕРЕНАПРАВЛЯЄМО<br>
-      ДО ОСОБЛИВО ВАЖЛИВОГО ДОКУМЕНТА...
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       СТОРІНКА 5
-       ===================================================== -->
-
-  <div
-    id="page5"
-    class="page"
-  >
-
-    <div
-      class="certificate-placeholder"
-    >
-
-      <h1>
-        💍 СВІДОЦТВО 💍
-      </h1>
-
-
-      <p>
-
-        ТУТ БУДЕ НАШЕ<br>
-
-        СВІДОЦТВО ПРО ШЛЮБ ❤️
-
-      </p>
-
-
-      <p>
-
-        СТОРІНКА ЩЕ В ПРОЦЕСІ<br>
-
-        ПІДГОТОВКИ 😎
-
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-       ===================================================== -->
-
   <script>
 
 
     /* =====================================================
-       АНІМАЦІЯ МАХАННЯ
+       МАХАННЯ
        ===================================================== */
 
     const me =
@@ -1597,23 +1175,18 @@
 
     let frame = 1;
 
-
     setInterval(() => {
 
-      frame =
-        frame === 1
-          ? 2
-          : 1;
+      frame = frame === 1 ? 2 : 1;
 
-      me.src =
-        `me${frame}.png`;
+      me.src = `me${frame}.png`;
 
     }, 140);
 
 
 
     /* =====================================================
-       ФУНКЦІЯ ПЕРЕХОДУ
+       ПЕРЕХОДИ
        ===================================================== */
 
     function showPage(page) {
@@ -1621,14 +1194,10 @@
       document
         .querySelectorAll(".page")
         .forEach(p => {
-
           p.style.display = "none";
-
         });
 
-
       page.style.display = "flex";
-
 
       window.scrollTo({
         top: 0,
@@ -1644,44 +1213,33 @@
        ===================================================== */
 
     const helloButton =
-      document.getElementById(
-        "helloButton"
-      );
+      document.getElementById("helloButton");
 
     const replyText =
-      document.getElementById(
-        "replyText"
-      );
+      document.getElementById("replyText");
 
+    helloButton.addEventListener("click", () => {
 
-    helloButton.addEventListener(
-      "click",
-      () => {
+      replyText.textContent =
+        "ДААААА ВОНА ПОМАХАЛА 😭❤️";
 
-        replyText.textContent =
-          "ДААААА ВОНА ПОМАХАЛА 😭❤️";
+      helloButton.textContent =
+        "👋🥹";
 
-        helloButton.textContent =
-          "👋🥹";
+      setTimeout(() => {
 
+        showPage(
+          document.getElementById("page2")
+        );
 
-        setTimeout(() => {
+      }, 3500);
 
-          showPage(
-            document.getElementById(
-              "page2"
-            )
-          );
-
-        }, 3500);
-
-      }
-    );
+    });
 
 
 
     /* =====================================================
-       ФУНКЦІЯ ВІДБИТКА
+       ВІДБИТОК ПІСЛЯ ФОТО
        ===================================================== */
 
     function setupFingerprint(
@@ -1696,29 +1254,23 @@
       let timer = null;
       let animation = null;
 
-
       function updateProgress() {
 
         if (!holding) {
           return;
         }
 
-
         const elapsed =
           Date.now() - startTime;
 
-
         const progress =
           Math.min(
-            elapsed /
-              (seconds * 1000),
+            elapsed / (seconds * 1000),
             1
           );
 
-
         const degrees =
           progress * 360;
-
 
         ring.style.background =
           `conic-gradient(
@@ -1727,7 +1279,6 @@
             transparent ${degrees}deg,
             transparent 360deg
           )`;
-
 
         if (progress < 1) {
 
@@ -1740,51 +1291,37 @@
 
       }
 
-
       function startHold(event) {
 
         event.preventDefault();
-
 
         if (holding) {
           return;
         }
 
-
         holding = true;
 
-        startTime =
-          Date.now();
+        startTime = Date.now();
 
-
-        ring.style.display =
-          "block";
-
+        ring.style.display = "block";
 
         updateProgress();
 
+        timer = setTimeout(() => {
 
-        timer =
-          setTimeout(() => {
+          holding = false;
 
-            holding = false;
+          cancelAnimationFrame(animation);
 
-            cancelAnimationFrame(
-              animation
-            );
+          ring.style.display = "none";
 
-            ring.style.display =
-              "none";
+          button.style.display = "none";
 
-            button.style.display =
-              "none";
+          callback();
 
-            callback();
-
-          }, seconds * 1000);
+        }, seconds * 1000);
 
       }
-
 
       function stopHold() {
 
@@ -1792,21 +1329,13 @@
           return;
         }
 
-
         holding = false;
-
 
         clearTimeout(timer);
 
+        cancelAnimationFrame(animation);
 
-        cancelAnimationFrame(
-          animation
-        );
-
-
-        ring.style.display =
-          "none";
-
+        ring.style.display = "none";
 
         ring.style.background =
           `conic-gradient(
@@ -1816,24 +1345,20 @@
 
       }
 
-
       button.addEventListener(
         "pointerdown",
         startHold
       );
-
 
       button.addEventListener(
         "pointerup",
         stopHold
       );
 
-
       button.addEventListener(
         "pointercancel",
         stopHold
       );
-
 
       button.addEventListener(
         "pointerleave",
@@ -1844,40 +1369,25 @@
 
 
 
-    /* =====================================================
-       ВІДБИТОК ПІСЛЯ ФОТО
-       ===================================================== */
-
     setupFingerprint(
 
-      document.getElementById(
-        "fingerButton1"
-      ),
+      document.getElementById("fingerButton1"),
 
-      document.getElementById(
-        "progressRing1"
-      ),
+      document.getElementById("progressRing1"),
 
       3,
 
       () => {
 
         const success =
-          document.getElementById(
-            "success1"
-          );
+          document.getElementById("success1");
 
-
-        success.style.display =
-          "block";
-
+        success.style.display = "block";
 
         setTimeout(() => {
 
           showPage(
-            document.getElementById(
-              "page3"
-            )
+            document.getElementById("page3")
           );
 
         }, 2200);
@@ -1893,78 +1403,153 @@
        ===================================================== */
 
     const questionNumber =
-      document.getElementById(
-        "questionNumber"
-      );
+      document.getElementById("questionNumber");
 
     const questionText =
-      document.getElementById(
-        "questionText"
-      );
+      document.getElementById("questionText");
 
     const answers =
-      document.getElementById(
-        "answers"
-      );
+      document.getElementById("answers");
 
     const prankMessage =
-      document.getElementById(
-        "prankMessage"
-      );
+      document.getElementById("prankMessage");
 
     const questionBox =
-      document.getElementById(
-        "questionBox"
-      );
+      document.getElementById("questionBox");
 
     const quizFinished =
-      document.getElementById(
-        "quizFinished"
-      );
-
-    const celebration =
-      document.getElementById(
-        "celebration"
-      );
+      document.getElementById("quizFinished");
 
     const sadPage =
-      document.getElementById(
-        "sadPage"
-      );
-
-    const rain =
-      document.getElementById(
-        "rain"
-      );
-
+      document.getElementById("sadPage");
 
     let currentQuestion = 1;
 
-    let equalAnswerShown = false;
+    let equalAnswerUnlocked = false;
 
 
 
-    /* =====================================================
-       ПОКАЗАТИ ТРЕТЄ ПИТАННЯ
-       ===================================================== */
+    function showQuestion1() {
+
+      currentQuestion = 1;
+
+      questionNumber.textContent =
+        "ПИТАННЯ 1 / 3";
+
+      questionText.textContent =
+        "КОЛИ МИ ПОЧАЛИ ЗУСТРІЧАТИСЬ?";
+
+      prankMessage.classList.remove("show");
+
+      answers.innerHTML = `
+
+        <button
+          class="answer-button"
+          data-answer="wrong"
+        >
+          15 серпня
+        </button>
+
+        <button
+          class="answer-button"
+          data-answer="correct"
+        >
+          16 серпня
+        </button>
+
+        <button
+          class="answer-button"
+          data-answer="wrong"
+        >
+          13 серпня
+        </button>
+
+      `;
+
+      addAnswerEvents();
+
+    }
+
+
+
+    function showQuestion2() {
+
+      currentQuestion = 2;
+
+      questionNumber.textContent =
+        "ПИТАННЯ 2 / 3";
+
+      questionText.textContent =
+        "ХТО БІЛЬШЕ ЛЮБИТЬ?";
+
+      prankMessage.classList.remove("show");
+
+      if (!equalAnswerUnlocked) {
+
+        answers.innerHTML = `
+
+          <button
+            class="answer-button"
+            data-answer="roma"
+          >
+            РОМА
+          </button>
+
+          <button
+            class="answer-button"
+            data-answer="tanketachka"
+          >
+            ТАНКЄТАЧКА
+          </button>
+
+        `;
+
+      } else {
+
+        answers.innerHTML = `
+
+          <button
+            class="answer-button"
+            data-answer="roma"
+          >
+            РОМА
+          </button>
+
+          <button
+            class="answer-button"
+            data-answer="tanketachka"
+          >
+            ТАНКЄТАЧКА
+          </button>
+
+          <button
+            class="answer-button"
+            data-answer="equal"
+          >
+            ОДНАКОВО ❤️
+          </button>
+
+        `;
+
+      }
+
+      addAnswerEvents();
+
+    }
+
+
 
     function showQuestion3() {
 
       currentQuestion = 3;
 
-
-      prankMessage.classList.remove(
-        "show"
-      );
-
-
       questionNumber.textContent =
         "ПИТАННЯ 3 / 3";
-
 
       questionText.textContent =
         "ТИ МЕНЕ ЛЮБИШ?";
 
+      prankMessage.classList.remove("show");
 
       answers.innerHTML = `
 
@@ -1984,329 +1569,11 @@
 
       `;
 
-
       addAnswerEvents();
 
     }
 
 
-
-    /* =====================================================
-       ПОКАЗАТИ ДРУГЕ ПИТАННЯ
-       ===================================================== */
-
-    function showQuestion2(
-      withEqual = false
-    ) {
-
-      currentQuestion = 2;
-
-      equalAnswerShown =
-        withEqual;
-
-
-      prankMessage.classList.remove(
-        "show"
-      );
-
-
-      questionNumber.textContent =
-        "ПИТАННЯ 2 / 3";
-
-
-      questionText.textContent =
-        "ХТО СИЛЬНІШЕ ЛЮБИТЬ?";
-
-
-      answers.innerHTML = `
-
-        <button
-          class="answer-button"
-          data-answer="roma"
-        >
-          РОМА
-        </button>
-
-        <button
-          class="answer-button"
-          data-answer="tanketachka"
-        >
-          ТАНКЄТАЧКА
-        </button>
-
-        ${
-          withEqual
-            ? `
-              <button
-                class="answer-button equal-answer"
-                data-answer="equal"
-              >
-                ОДНАКОВО ❤️
-              </button>
-            `
-            : ""
-        }
-
-      `;
-
-
-      addAnswerEvents();
-
-    }
-
-
-
-    /* =====================================================
-       НАСТУПНЕ ПИТАННЯ
-       ===================================================== */
-
-    function nextQuestion() {
-
-      if (currentQuestion === 1) {
-
-        showQuestion2();
-
-      }
-
-      else if (currentQuestion === 2) {
-
-        showQuestion3();
-
-      }
-
-    }
-
-
-
-    /* =====================================================
-       ПОКАЗАТИ СУМНУ СТОРІНКУ
-       ===================================================== */
-
-    function showSadPage() {
-
-      document
-        .querySelectorAll(".page")
-        .forEach(p => {
-
-          p.style.display = "none";
-
-        });
-
-
-      sadPage.style.display =
-        "flex";
-
-
-      createRain();
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-    }
-
-
-
-    /* =====================================================
-       ДОЩ
-       ===================================================== */
-
-    function createRain() {
-
-      rain.innerHTML = "";
-
-
-      const emojis = [
-        "💧",
-        "💦",
-        "😭",
-        "😢",
-        "💧"
-      ];
-
-
-      for (
-        let i = 0;
-        i < 45;
-        i++
-      ) {
-
-        const drop =
-          document.createElement(
-            "div"
-          );
-
-
-        drop.className =
-          "raindrop";
-
-
-        drop.textContent =
-          emojis[
-            Math.floor(
-              Math.random() *
-              emojis.length
-            )
-          ];
-
-
-        drop.style.left =
-          Math.random() * 100 + "%";
-
-
-        drop.style.animationDuration =
-          (0.8 + Math.random() * 1.7)
-          + "s";
-
-
-        drop.style.animationDelay =
-          Math.random() * 2 + "s";
-
-
-        drop.style.fontSize =
-          (18 + Math.random() * 22)
-          + "px";
-
-
-        rain.appendChild(
-          drop
-        );
-
-      }
-
-    }
-
-
-
-    /* =====================================================
-       СВЯТКУВАННЯ
-       ===================================================== */
-
-    function startCelebration() {
-
-      celebration.style.display =
-        "block";
-
-
-      celebration.innerHTML =
-        "";
-
-
-      const hearts = [
-        "❤️",
-        "💕",
-        "💖",
-        "💗",
-        "💓",
-        "💞"
-      ];
-
-
-      for (
-        let i = 0;
-        i < 35;
-        i++
-      ) {
-
-        const item =
-          document.createElement(
-            "div"
-          );
-
-
-        item.className =
-          "celebration-item celebration-heart";
-
-
-        item.textContent =
-          hearts[
-            Math.floor(
-              Math.random() *
-              hearts.length
-            )
-          ];
-
-
-        item.style.left =
-          Math.random() * 100 + "%";
-
-
-        item.style.animationDuration =
-          (1.8 + Math.random() * 2.2)
-          + "s";
-
-
-        item.style.animationDelay =
-          Math.random() * .8 + "s";
-
-
-        celebration.appendChild(
-          item
-        );
-
-      }
-
-
-      for (
-        let i = 0;
-        i < 45;
-        i++
-      ) {
-
-        const confetti =
-          document.createElement(
-            "div"
-          );
-
-
-        confetti.className =
-          "celebration-item celebration-confetti";
-
-
-        confetti.style.left =
-          Math.random() * 100 + "%";
-
-
-        confetti.style.animationDuration =
-          (1.5 + Math.random() * 2)
-          + "s";
-
-
-        confetti.style.animationDelay =
-          Math.random() * .8 + "s";
-
-
-        confetti.style.transform =
-          `rotate(
-            ${Math.random() * 360}deg
-          )`;
-
-
-        celebration.appendChild(
-          confetti
-        );
-
-      }
-
-
-      setTimeout(() => {
-
-        celebration.style.display =
-          "none";
-
-        celebration.innerHTML =
-          "";
-
-      }, 4500);
-
-    }
-
-
-
-    /* =====================================================
-       ОБРОБКА ВІДПОВІДЕЙ
-       ===================================================== */
 
     function addAnswerEvents() {
 
@@ -2314,7 +1581,6 @@
         answers.querySelectorAll(
           ".answer-button"
         );
-
 
       buttons.forEach(button => {
 
@@ -2327,59 +1593,44 @@
 
 
 
-            /* =============================================
+            /* =================================================
                ПИТАННЯ 1
-               ============================================= */
+               ================================================= */
 
-            if (
-              currentQuestion === 1
-            ) {
+            if (currentQuestion === 1) {
 
-              if (
-                answer === "correct"
-              ) {
+              if (answer === "correct") {
 
-                button.classList.add(
-                  "correct"
-                );
-
+                button.classList.add("correct");
 
                 buttons.forEach(b => {
-
                   b.disabled = true;
-
                 });
 
+                setTimeout(() => {
+                  showQuestion2();
+                }, 700);
+
+              } else {
+
+                button.classList.add("wrong");
+
+                button.textContent =
+                  "НЄЄЄ 😭";
 
                 setTimeout(() => {
 
-                  nextQuestion();
+                  button.classList.remove("wrong");
 
-                }, 700);
+                  button.textContent =
+                    button.dataset.original ||
+                    (
+                      button.dataset.answer === "wrong"
+                        ? "15 серпня"
+                        : "13 серпня"
+                    );
 
-              }
-
-              else {
-
-                button.classList.add(
-                  "wrong"
-                );
-
-
-                button.disabled =
-                  true;
-
-
-                setTimeout(() => {
-
-                  button.classList.remove(
-                    "wrong"
-                  );
-
-                  button.disabled =
-                    false;
-
-                }, 700);
+                }, 800);
 
               }
 
@@ -2387,35 +1638,79 @@
 
 
 
-            /* =============================================
+            /* =================================================
                ПИТАННЯ 2
-               ============================================= */
+               ================================================= */
 
-            else if (
-              currentQuestion === 2
-            ) {
+            else if (currentQuestion === 2) {
 
 
-              /*
-                ТІЛЬКИ "ОДНАКОВО"
-                Є ПРАВИЛЬНОЮ
-              */
+              /* ТАНКЄТАЧКА — НЕПРАВИЛЬНА */
 
-              if (
-                answer === "equal"
-              ) {
+              if (answer === "tanketachka") {
 
-                button.classList.add(
-                  "correct"
-                );
+                document.body.classList.add("prank");
 
+                button.classList.add("wrong");
+
+                button.textContent =
+                  "ОТ ВРЄДІНА 😭";
+
+                prankMessage.classList.add("show");
 
                 buttons.forEach(b => {
-
                   b.disabled = true;
-
                 });
 
+                setTimeout(() => {
+
+                  document.body
+                    .classList.remove("prank");
+
+                  prankMessage.classList.remove(
+                    "show"
+                  );
+
+                  equalAnswerUnlocked = true;
+
+                  showQuestion2();
+
+                }, 1800);
+
+              }
+
+
+              /* РОМА — ТЕЖ НЕПРАВИЛЬНА */
+
+              else if (answer === "roma") {
+
+                button.classList.add("wrong");
+
+                button.textContent =
+                  "НЕ ВГАДАЛА 😭";
+
+                buttons.forEach(b => {
+                  b.disabled = true;
+                });
+
+                setTimeout(() => {
+
+                  showQuestion2();
+
+                }, 900);
+
+              }
+
+
+              /* ТІЛЬКИ ОДНАКОВО — ПРАВИЛЬНО */
+
+              else if (answer === "equal") {
+
+                button.classList.add("correct");
+
+                buttons.forEach(b => {
+                  b.disabled = true;
+                });
 
                 setTimeout(() => {
 
@@ -2423,189 +1718,63 @@
 
                 }, 800);
 
-
-                return;
-
-              }
-
-
-
-              /*
-                РОМА — НЕПРАВИЛЬНА
-              */
-
-              if (
-                answer === "roma"
-              ) {
-
-                button.classList.add(
-                  "wrong"
-                );
-
-
-                button.disabled =
-                  true;
-
-
-                /*
-                  Після першої помилки
-                  показуємо "ОДНАКОВО"
-                */
-
-                if (
-                  !equalAnswerShown
-                ) {
-
-                  setTimeout(() => {
-
-                    showQuestion2(
-                      true
-                    );
-
-                  }, 700);
-
-                }
-
-
-                return;
-
-              }
-
-
-
-              /*
-                ТАНКЄТАЧКА —
-                ПРИКОЛ
-              */
-
-              if (
-                answer ===
-                "tanketachka"
-              ) {
-
-                document.body
-                  .classList.add(
-                    "prank"
-                  );
-
-
-                button.classList.add(
-                  "wrong"
-                );
-
-
-                button.textContent =
-                  "ОТ ВРЄДІНА 😭";
-
-
-                prankMessage.classList.add(
-                  "show"
-                );
-
-
-                buttons.forEach(b => {
-
-                  b.disabled = true;
-
-                });
-
-
-                setTimeout(() => {
-
-                  document.body
-                    .classList.remove(
-                      "prank"
-                    );
-
-                  /*
-                    Після приколу
-                    повертаємо питання,
-                    але додаємо
-                    "ОДНАКОВО ❤️"
-                  */
-
-                  showQuestion2(
-                    true
-                  );
-
-                }, 1800);
-
               }
 
             }
 
 
 
-            /* =============================================
+            /* =================================================
                ПИТАННЯ 3
-               ============================================= */
+               ================================================= */
 
-            else if (
-              currentQuestion === 3
-            ) {
+            else if (currentQuestion === 3) {
 
 
-              /*
-                ТАК ❤️
-              */
+              /* НІ */
 
-              if (
-                answer === "yes"
-              ) {
+              if (answer === "no") {
 
-                button.classList.add(
-                  "correct"
-                );
-
+                button.classList.add("wrong");
 
                 buttons.forEach(b => {
-
                   b.disabled = true;
-
                 });
 
+                setTimeout(() => {
 
-                startCelebration();
+                  document
+                    .querySelectorAll(".page")
+                    .forEach(p => {
+                      p.style.display = "none";
+                    });
 
+                  sadPage.style.display = "flex";
+
+                  createRain();
+
+                }, 600);
+
+              }
+
+
+              /* ТАК */
+
+              else if (answer === "yes") {
+
+                button.classList.add("correct");
+
+                buttons.forEach(b => {
+                  b.disabled = true;
+                });
 
                 setTimeout(() => {
 
                   questionBox.style.display =
                     "none";
 
-
                   quizFinished.style.display =
                     "block";
-
-                }, 2500);
-
-              }
-
-
-
-              /*
-                НІ
-              */
-
-              else if (
-                answer === "no"
-              ) {
-
-                button.classList.add(
-                  "wrong"
-                );
-
-
-                buttons.forEach(b => {
-
-                  b.disabled = true;
-
-                });
-
-
-                setTimeout(() => {
-
-                  showSadPage();
 
                 }, 700);
 
@@ -2622,50 +1791,239 @@
 
 
 
-    /* Початкові кнопки */
-
     addAnswerEvents();
 
 
 
     /* =====================================================
-       ФІНАЛЬНА АВТЕНТИФІКАЦІЯ
+       КНОПКА ДАЛІ ПІСЛЯ ВІКТОРИНИ
        ===================================================== */
 
-    setupFingerprint(
-
-      document.getElementById(
-        "fingerButton2"
-      ),
-
-      document.getElementById(
-        "progressRing2"
-      ),
-
-      1,
-
-      () => {
+    document
+      .getElementById("nextButton")
+      .addEventListener("click", () => {
 
         showPage(
-          document.getElementById(
-            "page4"
-          )
+          document.getElementById("page4")
         );
 
+      });
+
+
+
+    /* =====================================================
+       СУМНИЙ ДОЩ
+       ===================================================== */
+
+    function createRain() {
+
+      const rain =
+        document.getElementById("sadRain");
+
+      rain.innerHTML = "";
+
+      for (let i = 0; i < 45; i++) {
+
+        const drop =
+          document.createElement("div");
+
+        drop.className = "rain-drop";
+
+        drop.textContent =
+          i % 3 === 0
+            ? "💧"
+            : "☔";
+
+        drop.style.left =
+          Math.random() * 100 + "%";
+
+        drop.style.animationDuration =
+          (1.2 + Math.random() * 2.2) + "s";
+
+        drop.style.animationDelay =
+          Math.random() * 2 + "s";
+
+        rain.appendChild(drop);
+
+      }
+
+    }
+
+
+
+    /* =====================================================
+       КНОПКА "ЗАТИСНИ ЦЮ КНОПОЧКУ"
+       ===================================================== */
+
+    const holdButton =
+      document.getElementById("holdButton");
+
+    let holdTimer = null;
+    let holdingButton = false;
+
+    function startFinalHold(event) {
+
+      event.preventDefault();
+
+      if (holdingButton) {
+        return;
+      }
+
+      holdingButton = true;
+
+      holdButton.textContent =
+        "ТРИМАЙ... 😳";
+
+      holdTimer = setTimeout(() => {
+
+        holdingButton = false;
+
+        holdButton.textContent =
+          "ГОТОВО ❤️";
 
         setTimeout(() => {
 
           showPage(
-            document.getElementById(
-              "page5"
-            )
+            document.getElementById("page5")
           );
 
-        }, 2000);
+          startCelebration();
+
+        }, 500);
+
+      }, 1000);
+
+    }
+
+    function stopFinalHold() {
+
+      if (!holdingButton) {
+        return;
+      }
+
+      holdingButton = false;
+
+      clearTimeout(holdTimer);
+
+      holdButton.textContent =
+        "ЗАТИСНУТИ";
+
+    }
+
+    holdButton.addEventListener(
+      "pointerdown",
+      startFinalHold
+    );
+
+    holdButton.addEventListener(
+      "pointerup",
+      stopFinalHold
+    );
+
+    holdButton.addEventListener(
+      "pointercancel",
+      stopFinalHold
+    );
+
+    holdButton.addEventListener(
+      "pointerleave",
+      stopFinalHold
+    );
+
+
+
+    /* =====================================================
+       НЕСКІНЧЕННЕ КОНФЕТІ ПІСЛЯ СВІДОЦТВА
+       ===================================================== */
+
+    const celebration =
+      document.getElementById("celebration");
+
+    const celebrationSymbols = [
+      "❤️",
+      "💕",
+      "💖",
+      "💗",
+      "💓",
+      "💘",
+      "🥳",
+      "🎉",
+      "🎊",
+      "✨",
+      "🌈",
+      "🩷",
+      "💙",
+      "💛",
+      "💚",
+      "💜",
+      "🧡",
+      "🎀"
+    ];
+
+    function createCelebrationItem() {
+
+      const item =
+        document.createElement("div");
+
+      item.className =
+        "celebration-item";
+
+      item.textContent =
+        celebrationSymbols[
+          Math.floor(
+            Math.random() *
+            celebrationSymbols.length
+          )
+        ];
+
+      item.style.left =
+        Math.random() * 100 + "%";
+
+      item.style.fontSize =
+        (18 + Math.random() * 28) + "px";
+
+      item.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+      item.style.animationDelay =
+        Math.random() * 1.5 + "s";
+
+      celebration.appendChild(item);
+
+      setTimeout(() => {
+
+        item.remove();
+
+      }, 8500);
+
+    }
+
+
+    function startCelebration() {
+
+      celebration.style.display =
+        "block";
+
+      /*
+        Спочатку запускаємо багато,
+        а потім продовжуємо безкінечно.
+      */
+
+      for (let i = 0; i < 35; i++) {
+
+        setTimeout(() => {
+          createCelebrationItem();
+        }, i * 80);
 
       }
 
-    );
+      setInterval(() => {
+
+        createCelebrationItem();
+
+      }, 180);
+
+    }
 
   </script>
 
