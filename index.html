@@ -22,7 +22,16 @@
 
     .page {
       min-height: 100vh;
-      padding: 25px 15px 40px;
+      padding: 25px 12px 50px;
+    }
+
+
+    /* =========================
+       ПЕРША СТОРІНКА
+       ========================= */
+
+    #page1 {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -33,9 +42,6 @@
       margin-top: 10px;
       mix-blend-mode: darken;
     }
-
-
-    /* ПІЛІВЄЄЄЄЄЄЄЄЄТ */
 
     .hello {
       position: relative;
@@ -78,9 +84,6 @@
       }
     }
 
-
-    /* ЛІТАЮЧІ СМАЙЛИКИ */
-
     .decor {
       position: absolute;
       pointer-events: none;
@@ -91,25 +94,21 @@
     .d1 {
       left: 8%;
       top: 5px;
-      animation-delay: 0s;
     }
 
     .d2 {
       right: 8%;
       top: 15px;
-      animation-delay: 0.5s;
     }
 
     .d3 {
       left: 18%;
       bottom: 5px;
-      animation-delay: 0.8s;
     }
 
     .d4 {
       right: 18%;
       bottom: 0;
-      animation-delay: 1.2s;
     }
 
     @keyframes floatAround {
@@ -122,14 +121,636 @@
       }
     }
 
-
-    /* ТЕКСТ */
-
     .reply-text {
       font-size: clamp(18px, 5vw, 30px);
       font-weight: 800;
       margin: 5px 0 12px;
     }
 
+    .hand {
+      width: 120px;
+      height: 120px;
 
-    /*
+      border: 5px solid #888;
+      background: #FFE4D1;
+
+      font-size: 70px;
+
+      cursor: pointer;
+      border-radius: 50%;
+
+      box-shadow:
+        0 7px 0 #666,
+        0 10px 20px rgba(0, 0, 0, 0.25);
+
+      transition:
+        transform 0.12s,
+        box-shadow 0.12s;
+
+      touch-action: manipulation;
+    }
+
+    .hand:active {
+      transform: translateY(6px) scale(0.95);
+
+      box-shadow:
+        0 2px 0 #666,
+        0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* =========================
+       ДРУГА СТОРІНКА
+       ========================= */
+
+    #page2 {
+      display: none;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page2-title {
+      font-size: clamp(24px, 7vw, 42px);
+      font-weight: 900;
+      margin: 5px 0 25px;
+      line-height: 1.05;
+    }
+
+
+    /* МОТУЗКИ */
+
+    .photos-area {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .rope-row {
+      position: relative;
+      height: 180px;
+      margin-bottom: 5px;
+    }
+
+    .rope {
+      position: absolute;
+
+      left: -5%;
+      width: 110%;
+      height: 7px;
+
+      background: #8B6548;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 3px 3px rgba(0, 0, 0, 0.18);
+
+      transform-origin: center;
+    }
+
+    .rope1 {
+      top: 45px;
+      transform: rotate(3deg);
+    }
+
+    .rope2 {
+      top: 55px;
+      transform: rotate(-3deg);
+    }
+
+    .rope3 {
+      top: 50px;
+      transform: rotate(2deg);
+    }
+
+
+    /* ФОТО */
+
+    .photo {
+      position: absolute;
+
+      width: 105px;
+      height: 125px;
+
+      object-fit: cover;
+
+      background: white;
+
+      padding: 6px 6px 18px;
+
+      border-radius: 2px;
+
+      box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.22);
+
+      transform-origin: top center;
+
+      animation: photoSwing 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes photoSwing {
+      from {
+        transform: rotate(-3deg);
+      }
+
+      to {
+        transform: rotate(3deg);
+      }
+    }
+
+
+    /* ПРИЩІПКИ */
+
+    .clip {
+      position: absolute;
+
+      width: 24px;
+      height: 35px;
+
+      background: #D9D9D9;
+
+      border: 2px solid #777;
+
+      border-radius: 5px 5px 8px 8px;
+
+      z-index: 5;
+
+      box-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .clip::before {
+      content: "";
+
+      position: absolute;
+
+      width: 10px;
+      height: 20px;
+
+      border: 2px solid #777;
+
+      border-radius: 50%;
+
+      left: 5px;
+      top: 4px;
+    }
+
+
+    /* ПОЗИЦІЇ ФОТО */
+
+    .p1 {
+      left: 7%;
+      top: 48px;
+      transform: rotate(-6deg);
+    }
+
+    .p2 {
+      left: 36%;
+      top: 45px;
+      transform: rotate(4deg);
+      animation-delay: .4s;
+    }
+
+    .p3 {
+      right: 7%;
+      top: 50px;
+      transform: rotate(-3deg);
+      animation-delay: .8s;
+    }
+
+    .p4 {
+      left: 18%;
+      top: 48px;
+      transform: rotate(5deg);
+      animation-delay: .2s;
+    }
+
+    .p5 {
+      right: 18%;
+      top: 48px;
+      transform: rotate(-5deg);
+      animation-delay: .7s;
+    }
+
+    .p6 {
+      left: 7%;
+      top: 48px;
+      transform: rotate(4deg);
+      animation-delay: .3s;
+    }
+
+    .p7 {
+      left: 36%;
+      top: 45px;
+      transform: rotate(-4deg);
+      animation-delay: .6s;
+    }
+
+    .p8 {
+      right: 7%;
+      top: 50px;
+      transform: rotate(5deg);
+      animation-delay: 1s;
+    }
+
+
+    /* =========================
+       ПЕРЕВІРКА
+       ========================= */
+
+    .captcha-title {
+      font-size: clamp(20px, 5vw, 30px);
+      font-weight: 900;
+      margin: 5px 0 15px;
+    }
+
+    .captcha-subtitle {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .finger-button {
+      position: relative;
+
+      width: 125px;
+      height: 125px;
+
+      border-radius: 50%;
+
+      border: 5px solid #888;
+
+      background: #FFE4D1;
+
+      font-size: 62px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 7px 0 #666,
+        0 10px 20px rgba(0, 0, 0, 0.25);
+
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    .finger-button:active {
+      transform: translateY(5px);
+      box-shadow:
+        0 2px 0 #666,
+        0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* КІЛЬЦЕ ПРОГРЕСУ */
+
+    .progress-ring {
+      position: absolute;
+
+      inset: -9px;
+
+      border-radius: 50%;
+
+      border: 7px solid transparent;
+
+      border-top-color: #777;
+
+      transform: rotate(-45deg);
+
+      display: none;
+    }
+
+    .holding .progress-ring {
+      display: block;
+      animation: progress 3s linear forwards;
+    }
+
+    @keyframes progress {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+
+    /* УСПІХ */
+
+    .success {
+      display: none;
+
+      margin-top: 25px;
+
+      animation: successPop .5s ease-out;
+    }
+
+    .success-check {
+      font-size: 70px;
+      font-weight: 900;
+    }
+
+    .success-text {
+      font-size: clamp(22px, 6vw, 34px);
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .success-love {
+      margin-top: 12px;
+      font-size: clamp(20px, 5vw, 30px);
+      font-weight: 800;
+    }
+
+    @keyframes successPop {
+      from {
+        transform: scale(.5);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       СТОРІНКА 1
+       ========================= -->
+
+  <div id="page1" class="page">
+
+    <img
+      class="me"
+      id="me"
+      src="me1.png"
+      alt="Я махаю"
+    >
+
+    <div class="hello">
+
+      <div class="decor d1">♡</div>
+      <div class="decor d2">✦</div>
+      <div class="decor d3">:3</div>
+      <div class="decor d4">👋</div>
+
+      <div class="hello-text">
+        ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ
+      </div>
+
+    </div>
+
+    <div class="reply-text">
+      ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ У ВІДПОВІДЬ
+    </div>
+
+    <button class="hand" id="helloButton">
+      👋
+    </button>
+
+  </div>
+
+
+  <!-- =========================
+       СТОРІНКА 2
+       ========================= -->
+
+  <div id="page2" class="page">
+
+    <div class="page2-title">
+      ТУТ ТРОХИ<br>
+      НАШИХ ФОТОЧОК 📸
+    </div>
+
+
+    <div class="photos-area">
+
+
+      <!-- МОТУЗКА 1 -->
+
+      <div class="rope-row">
+
+        <div class="rope rope1"></div>
+
+        <img class="photo p1" src="photo1.jpg">
+        <div class="clip" style="left: 10%; top: 40px;"></div>
+
+        <img class="photo p2" src="photo2.jpg">
+        <div class="clip" style="left: 39%; top: 38px;"></div>
+
+        <img class="photo p3" src="photo3.jpg">
+        <div class="clip" style="right: 10%; top: 42px;"></div>
+
+      </div>
+
+
+      <!-- МОТУЗКА 2 -->
+
+      <div class="rope-row">
+
+        <div class="rope rope2"></div>
+
+        <img class="photo p4" src="photo4.jpg">
+        <div class="clip" style="left: 21%; top: 40px;"></div>
+
+        <img class="photo p5" src="photo5.jpg">
+        <div class="clip" style="right: 21%; top: 40px;"></div>
+
+      </div>
+
+
+      <!-- МОТУЗКА 3 -->
+
+      <div class="rope-row">
+
+        <div class="rope rope3"></div>
+
+        <img class="photo p6" src="photo6.jpg">
+        <div class="clip" style="left: 10%; top: 40px;"></div>
+
+        <img class="photo p7" src="photo7.jpg">
+        <div class="clip" style="left: 39%; top: 38px;"></div>
+
+        <img class="photo p8" src="photo8.jpg">
+        <div class="clip" style="right: 10%; top: 42px;"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ПЕРЕВІРКА -->
+
+    <div class="captcha-title">
+      ПЕРЕВІРКА НА<br>
+      КОХАНУ ТАНКЄТАЧКУ ❤️
+    </div>
+
+    <div class="captcha-subtitle">
+      Затисни відбиток пальця на 3 секунди
+    </div>
+
+
+    <button class="finger-button" id="fingerButton">
+
+      ☝️
+
+      <div class="progress-ring"></div>
+
+    </button>
+
+
+    <!-- УСПІШНА ПЕРЕВІРКА -->
+
+    <div class="success" id="success">
+
+      <div class="success-check">
+        ✓
+      </div>
+
+      <div class="success-text">
+        ПЕРЕВІРКУ ПРОЙДЕНО
+      </div>
+
+      <div class="success-love">
+        Я ТЕБЕ ДУЖЕ ДУЖЕ СИЛЬНО КОХАЮ ❤️
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    /* =========================
+       МАХАННЯ
+       ========================= */
+
+    const me = document.getElementById("me");
+
+    let frame = 1;
+
+    setInterval(() => {
+
+      frame = frame === 1 ? 2 : 1;
+
+      me.src = `me${frame}.png`;
+
+    }, 140);
+
+
+    /* =========================
+       ПЕРЕХІД НА СТОРІНКУ 2
+       ========================= */
+
+    const helloButton =
+      document.getElementById("helloButton");
+
+    const page1 =
+      document.getElementById("page1");
+
+    const page2 =
+      document.getElementById("page2");
+
+
+    helloButton.addEventListener("click", () => {
+
+      page1.style.display = "none";
+
+      page2.style.display = "flex";
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* =========================
+       ПЕРЕВІРКА ПАЛЬЦЕМ
+       ========================= */
+
+    const fingerButton =
+      document.getElementById("fingerButton");
+
+    const success =
+      document.getElementById("success");
+
+    let holdTimer = null;
+
+    let holding = false;
+
+
+    function startHold(event) {
+
+      event.preventDefault();
+
+      if (holding) return;
+
+      holding = true;
+
+      fingerButton.classList.add("holding");
+
+      holdTimer = setTimeout(() => {
+
+        holding = false;
+
+        fingerButton.classList.remove("holding");
+
+        fingerButton.style.display = "none";
+
+        success.style.display = "block";
+
+      }, 3000);
+
+    }
+
+
+    function stopHold() {
+
+      if (!holding) return;
+
+      holding = false;
+
+      clearTimeout(holdTimer);
+
+      fingerButton.classList.remove("holding");
+
+    }
+
+
+    fingerButton.addEventListener(
+      "pointerdown",
+      startHold
+    );
+
+    fingerButton.addEventListener(
+      "pointerup",
+      stopHold
+    );
+
+    fingerButton.addEventListener(
+      "pointercancel",
+      stopHold
+    );
+
+    fingerButton.addEventListener(
+      "pointerleave",
+      stopHold
+    );
+
+  </script>
+
+</body>
+  </html>
