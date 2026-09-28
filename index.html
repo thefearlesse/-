@@ -15,15 +15,10 @@
     body {
       margin: 0;
       min-height: 100vh;
-
       background: #FFE4D1;
-
       font-family: Arial, sans-serif;
-
       text-align: center;
-
       overflow-x: hidden;
-
       transition:
         background 0.15s,
         filter 0.15s;
@@ -36,9 +31,7 @@
 
     .page {
       min-height: 100vh;
-
-      padding:
-        25px 12px 60px;
+      padding: 25px 12px 60px;
     }
 
 
@@ -47,56 +40,35 @@
        ===================================================== */
 
     #page1 {
-
       min-height: 100vh;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
     }
 
 
     .me {
-
-      width:
-        min(330px, 80vw);
-
+      width: min(330px, 80vw);
       margin-top: 10px;
-
       mix-blend-mode: darken;
     }
 
 
     .hello {
-
       position: relative;
-
       width: 100%;
-
       height: 100px;
-
       overflow: hidden;
-
-      margin:
-        5px 0 15px;
+      margin: 5px 0 15px;
     }
 
 
     .hello-text {
-
       position: absolute;
-
       white-space: nowrap;
-
-      font-size:
-        clamp(32px, 9vw, 65px);
-
+      font-size: clamp(32px, 9vw, 65px);
       font-weight: 900;
-
       color: #111;
-
       animation:
         moveText 3.2s linear infinite,
         bounceText 0.55s ease-in-out infinite alternate;
@@ -104,7 +76,6 @@
 
 
     @keyframes moveText {
-
       from {
         left: 100%;
       }
@@ -112,12 +83,10 @@
       to {
         left: -120%;
       }
-
     }
 
 
     @keyframes bounceText {
-
       from {
         transform:
           translateY(5px)
@@ -129,21 +98,15 @@
           translateY(-8px)
           rotate(2deg);
       }
-
     }
 
 
     .decor {
-
       position: absolute;
-
       pointer-events: none;
-
       font-size: 25px;
-
       animation:
         floatAround 2.5s ease-in-out infinite alternate;
-
       z-index: 2;
     }
 
@@ -173,7 +136,6 @@
 
 
     @keyframes floatAround {
-
       from {
         transform:
           translateY(8px)
@@ -185,55 +147,36 @@
           translateY(-12px)
           rotate(12deg);
       }
-
     }
 
 
     .reply-text {
-
-      font-size:
-        clamp(18px, 5vw, 30px);
-
+      font-size: clamp(18px, 5vw, 30px);
       font-weight: 800;
-
-      margin:
-        5px 0 12px;
-
+      margin: 5px 0 12px;
       min-height: 38px;
     }
 
 
     .hand {
-
       width: 120px;
       height: 120px;
-
-      border:
-        5px solid #888;
-
-      background:
-        #FFE4D1;
-
+      border: 5px solid #888;
+      background: #FFE4D1;
       font-size: 70px;
-
       cursor: pointer;
-
       border-radius: 50%;
-
       box-shadow:
         0 7px 0 #666,
         0 10px 20px rgba(0,0,0,0.25);
-
       transition:
         transform 0.12s,
         box-shadow 0.12s;
-
       touch-action: manipulation;
     }
 
 
     .hand:active {
-
       transform:
         translateY(6px)
         scale(0.95);
@@ -250,36 +193,24 @@
        ===================================================== */
 
     #page2 {
-
       display: none;
-
       min-height: 100vh;
-
       flex-direction: column;
-
       align-items: center;
     }
 
 
     .page2-title {
-
-      font-size:
-        clamp(30px, 9vw, 55px);
-
+      font-size: clamp(30px, 9vw, 55px);
       font-weight: 900;
-
-      margin:
-        5px 0 25px;
-
+      margin: 5px 0 25px;
       line-height: 1.05;
-
       animation:
         titleWiggle 1.2s ease-in-out infinite alternate;
     }
 
 
     @keyframes titleWiggle {
-
       from {
         transform:
           rotate(-2deg)
@@ -291,7 +222,6 @@
           rotate(2deg)
           scale(1.04);
       }
-
     }
 
 
@@ -301,77 +231,52 @@
        ===================================================== */
 
     .photos-area {
-
       width: 100%;
-
       max-width: 650px;
-
-      margin:
-        0 auto 35px;
+      margin: 0 auto 35px;
     }
 
 
     .rope-row {
-
       position: relative;
-
       height: 170px;
-
       margin-bottom: 5px;
     }
 
 
     .rope {
-
       position: absolute;
-
       left: -5%;
-
       width: 110%;
-
       height: 45px;
-
-      border-bottom:
-        7px solid #8B6548;
-
-      border-radius:
-        0 0 50% 50%;
-
+      border-bottom: 7px solid #8B6548;
+      border-radius: 0 0 50% 50%;
       filter:
         drop-shadow(
           0 3px 2px
           rgba(0,0,0,0.15)
         );
-
       z-index: 1;
     }
 
 
     .rope1 {
-
       top: 15px;
-
-      transform:
-        rotate(2deg);
+      transform: rotate(2deg);
     }
 
 
     .rope2 {
-
       top: 20px;
-
-      transform:
-        rotate(-2deg);
+      transform: rotate(-2deg);
     }
 
 
     .rope3 {
-
       top: 12px;
-
-      transform:
-        rotate(2deg);
+      transform: rotate(2deg);
     }
+
 
 
     /* =====================================================
@@ -379,130 +284,94 @@
        ===================================================== */
 
     .photo {
-
       position: absolute;
-
       width: 82px;
       height: 100px;
-
       object-fit: cover;
-
       background: white;
-
-      padding:
-        5px 5px 14px;
-
+      padding: 5px 5px 14px;
       border-radius: 2px;
-
       box-shadow:
         0 5px 10px
         rgba(0,0,0,0.22);
-
-      transform-origin:
-        top center;
-
+      transform-origin: top center;
       z-index: 2;
     }
 
 
     .p1 {
-
       left: 7%;
       top: 43px;
-
       --angle: -7deg;
-
       animation:
         swing1 3.2s ease-in-out infinite alternate;
     }
 
 
     .p2 {
-
       left: 36%;
       top: 48px;
-
       --angle: 5deg;
-
       animation:
         swing2 3.5s ease-in-out infinite alternate;
     }
 
 
     .p3 {
-
       right: 7%;
       top: 42px;
-
       --angle: -4deg;
-
       animation:
         swing3 3.1s ease-in-out infinite alternate;
     }
 
 
     .p4 {
-
       left: 18%;
       top: 47px;
-
       --angle: 6deg;
-
       animation:
         swing4 3.6s ease-in-out infinite alternate;
     }
 
 
     .p5 {
-
       right: 18%;
       top: 43px;
-
       --angle: -6deg;
-
       animation:
         swing5 3.3s ease-in-out infinite alternate;
     }
 
 
     .p6 {
-
       left: 7%;
       top: 45px;
-
       --angle: 5deg;
-
       animation:
         swing6 3.4s ease-in-out infinite alternate;
     }
 
 
     .p7 {
-
       left: 36%;
       top: 48px;
-
       --angle: -5deg;
-
       animation:
         swing7 3.7s ease-in-out infinite alternate;
     }
 
 
     .p8 {
-
       right: 7%;
       top: 43px;
-
       --angle: 7deg;
-
       animation:
         swing8 3.2s ease-in-out infinite alternate;
     }
 
 
     @keyframes swing1 {
-
       from {
         transform:
           rotate(
@@ -516,12 +385,10 @@
             calc(var(--angle) + 2deg)
           );
       }
-
     }
 
 
     @keyframes swing2 {
-
       from {
         transform:
           rotate(
@@ -535,12 +402,10 @@
             calc(var(--angle) - 2deg)
           );
       }
-
     }
 
 
     @keyframes swing3 {
-
       from {
         transform:
           rotate(
@@ -554,12 +419,10 @@
             calc(var(--angle) + 2deg)
           );
       }
-
     }
 
 
     @keyframes swing4 {
-
       from {
         transform:
           rotate(
@@ -573,12 +436,10 @@
             calc(var(--angle) - 2deg)
           );
       }
-
     }
 
 
     @keyframes swing5 {
-
       from {
         transform:
           rotate(
@@ -592,12 +453,10 @@
             calc(var(--angle) + 2deg)
           );
       }
-
     }
 
 
     @keyframes swing6 {
-
       from {
         transform:
           rotate(
@@ -611,12 +470,10 @@
             calc(var(--angle) - 2deg)
           );
       }
-
     }
 
 
     @keyframes swing7 {
-
       from {
         transform:
           rotate(
@@ -630,12 +487,10 @@
             calc(var(--angle) + 2deg)
           );
       }
-
     }
 
 
     @keyframes swing8 {
-
       from {
         transform:
           rotate(
@@ -649,7 +504,6 @@
             calc(var(--angle) - 2deg)
           );
       }
-
     }
 
 
@@ -659,23 +513,13 @@
        ===================================================== */
 
     .clip {
-
       position: absolute;
-
       width: 20px;
       height: 30px;
-
-      background:
-        #D9D9D9;
-
-      border:
-        2px solid #777;
-
-      border-radius:
-        5px 5px 8px 8px;
-
+      background: #D9D9D9;
+      border: 2px solid #777;
+      border-radius: 5px 5px 8px 8px;
       z-index: 5;
-
       box-shadow:
         0 2px 3px
         rgba(0,0,0,0.2);
@@ -683,19 +527,12 @@
 
 
     .clip::before {
-
       content: "";
-
       position: absolute;
-
       width: 8px;
       height: 17px;
-
-      border:
-        2px solid #777;
-
+      border: 2px solid #777;
       border-radius: 50%;
-
       left: 4px;
       top: 3px;
     }
@@ -707,58 +544,35 @@
        ===================================================== */
 
     .captcha-title {
-
-      font-size:
-        clamp(20px, 5vw, 30px);
-
+      font-size: clamp(20px, 5vw, 30px);
       font-weight: 900;
-
-      margin:
-        5px 0 20px;
+      margin: 5px 0 20px;
     }
 
 
     .finger-button {
-
       position: relative;
-
       width: 125px;
       height: 125px;
-
       border-radius: 50%;
-
-      border:
-        5px solid #888;
-
-      background:
-        #FFE4D1;
-
+      border: 5px solid #888;
+      background: #FFE4D1;
       cursor: pointer;
-
       box-shadow:
         0 7px 0 #666,
         0 10px 20px
         rgba(0,0,0,0.25);
-
       user-select: none;
-
       -webkit-user-select: none;
-
       touch-action: none;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
 
 
     .finger-button:active {
-
-      transform:
-        translateY(5px);
-
+      transform: translateY(5px);
       box-shadow:
         0 2px 0 #666,
         0 5px 10px
@@ -767,45 +581,32 @@
 
 
     .fingerprint {
-
       width: 72px;
       height: 72px;
-
       object-fit: contain;
-
       user-select: none;
-
       -webkit-user-drag: none;
-
       pointer-events: none;
     }
 
 
     .progress-ring {
-
       position: absolute;
-
       inset: -10px;
-
       border-radius: 50%;
-
       display: none;
-
       background:
         conic-gradient(
           #777 0deg,
           transparent 0deg
         );
-
       pointer-events: none;
-
       -webkit-mask:
         radial-gradient(
           farthest-side,
           transparent calc(100% - 7px),
           #000 calc(100% - 6px)
         );
-
       mask:
         radial-gradient(
           farthest-side,
@@ -815,69 +616,49 @@
     }
 
 
+
     /* =====================================================
        УСПІХ
        ===================================================== */
 
     .success {
-
       display: none;
-
       margin-top: 25px;
-
       animation:
         successPop .5s ease-out;
     }
 
 
     .success-check {
-
       font-size: 70px;
-
       font-weight: 900;
     }
 
 
     .success-text {
-
-      font-size:
-        clamp(22px, 6vw, 34px);
-
+      font-size: clamp(22px, 6vw, 34px);
       font-weight: 900;
-
       line-height: 1.15;
     }
 
 
     .success-love {
-
       margin-top: 12px;
-
-      font-size:
-        clamp(20px, 5vw, 30px);
-
+      font-size: clamp(20px, 5vw, 30px);
       font-weight: 800;
     }
 
 
     @keyframes successPop {
-
       from {
-
-        transform:
-          scale(.5);
-
+        transform: scale(.5);
         opacity: 0;
       }
 
       to {
-
-        transform:
-          scale(1);
-
+        transform: scale(1);
         opacity: 1;
       }
-
     }
 
 
@@ -887,45 +668,28 @@
        ===================================================== */
 
     #page3 {
-
       display: none;
-
       min-height: 100vh;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: flex-start;
     }
 
 
     .quiz-title {
-
-      font-size:
-        clamp(30px, 8vw, 48px);
-
+      font-size: clamp(30px, 8vw, 48px);
       font-weight: 900;
-
-      margin:
-        15px 0 30px;
+      margin: 15px 0 30px;
     }
 
 
     .question-box {
-
       width: 100%;
-
       max-width: 500px;
-
-      padding:
-        25px 18px 30px;
-
+      padding: 25px 18px 30px;
       background:
         rgba(255,255,255,0.45);
-
       border-radius: 25px;
-
       box-shadow:
         0 8px 20px
         rgba(0,0,0,0.12);
@@ -933,63 +697,40 @@
 
 
     .question-number {
-
       font-size: 17px;
-
       font-weight: 700;
-
       color: #777;
-
       margin-bottom: 12px;
     }
 
 
     .question-text {
-
-      font-size:
-        clamp(25px, 7vw, 36px);
-
+      font-size: clamp(25px, 7vw, 36px);
       font-weight: 900;
-
       line-height: 1.1;
-
       margin-bottom: 25px;
     }
 
 
     .answers {
-
       display: flex;
-
       flex-direction: column;
-
       gap: 12px;
     }
 
 
     .answer-button {
-
       width: 100%;
-
       min-height: 58px;
-
       border: none;
-
       border-radius: 18px;
-
       background: white;
-
       color: #111;
-
       font-size: 21px;
-
       font-weight: 800;
-
       cursor: pointer;
-
       box-shadow:
         0 5px 0 #d0b8aa;
-
       transition:
         transform .12s,
         background .15s,
@@ -998,31 +739,47 @@
 
 
     .answer-button:active {
-
-      transform:
-        translateY(4px);
-
+      transform: translateY(4px);
       box-shadow:
         0 1px 0 #d0b8aa;
     }
 
 
     .answer-button.correct {
-
-      background:
-        #75d66f;
-
+      background: #75d66f;
       color: white;
     }
 
 
     .answer-button.wrong {
-
-      background:
-        #ff5252;
-
+      background: #ff5252;
       color: white;
+      animation: wrongShake .35s ease;
     }
+
+
+    @keyframes wrongShake {
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-7px);
+      }
+
+      50% {
+        transform: translateX(7px);
+      }
+
+      75% {
+        transform: translateX(-5px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
 
 
     /* =====================================================
@@ -1030,88 +787,232 @@
        ===================================================== */
 
     body.prank {
-
       animation:
         redFlash .22s linear 4;
     }
 
 
     @keyframes redFlash {
-
       0% {
-        background:
-          #FFE4D1;
+        background: #FFE4D1;
       }
 
       50% {
-        background:
-          #ff5b5b;
+        background: #ff5b5b;
       }
 
       100% {
-        background:
-          #FFE4D1;
+        background: #FFE4D1;
       }
     }
 
 
     .prank-message {
-
       display: none;
-
       margin-top: 20px;
-
-      font-size:
-        clamp(25px, 7vw, 38px);
-
+      font-size: clamp(25px, 7vw, 38px);
       font-weight: 900;
-
-      color:
-        #e00000;
-
+      color: #e00000;
       animation:
         shake .45s ease-in-out;
     }
 
 
     .prank-message.show {
-
       display: block;
     }
 
 
     @keyframes shake {
-
       0% {
-        transform:
-          translateX(0);
+        transform: translateX(0);
       }
 
       20% {
-        transform:
-          translateX(-10px);
+        transform: translateX(-10px);
       }
 
       40% {
-        transform:
-          translateX(10px);
+        transform: translateX(10px);
       }
 
       60% {
-        transform:
-          translateX(-7px);
+        transform: translateX(-7px);
       }
 
       80% {
-        transform:
-          translateX(7px);
+        transform: translateX(7px);
       }
 
       100% {
-        transform:
-          translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+
+
+    /* =====================================================
+       ВАРІАНТ "ОДНАКОВО"
+       ===================================================== */
+
+    .equal-answer {
+      animation:
+        equalAppear .5s ease-out;
+    }
+
+
+    @keyframes equalAppear {
+      from {
+        opacity: 0;
+        transform: scale(.7);
       }
 
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+
+    /* =====================================================
+       СЕРЦЯ ТА КОНФЕТІ
+       ===================================================== */
+
+    #celebration {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+      display: none;
+    }
+
+
+    .celebration-item {
+      position: absolute;
+      top: -60px;
+      animation:
+        celebrationFall linear forwards;
+    }
+
+
+    .celebration-heart {
+      font-size: 35px;
+    }
+
+
+    .celebration-confetti {
+      width: 12px;
+      height: 22px;
+      background: #111;
+      border-radius: 3px;
+    }
+
+
+    @keyframes celebrationFall {
+      from {
+        transform:
+          translateY(0)
+          rotate(0deg);
+        opacity: 1;
+      }
+
+      to {
+        transform:
+          translateY(115vh)
+          rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+
+
+    /* =====================================================
+       СУМНА СТОРІНКА
+       ===================================================== */
+
+    #sadPage {
+      display: none;
+      min-height: 100vh;
+      padding: 30px 15px;
+      background:
+        linear-gradient(
+          #7f8999,
+          #566171
+        );
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+
+    .sad-title {
+      font-size: clamp(35px, 10vw, 60px);
+      font-weight: 900;
+      margin-bottom: 20px;
+      animation:
+        sadShake 1.2s ease-in-out infinite alternate;
+    }
+
+
+    .sad-text {
+      font-size: clamp(28px, 8vw, 48px);
+      font-weight: 900;
+      line-height: 1.1;
+      z-index: 5;
+    }
+
+
+    .rain {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+
+    .raindrop {
+      position: absolute;
+      top: -50px;
+      color: #d9e8ff;
+      font-size: 28px;
+      animation:
+        rainFall linear infinite;
+      opacity: .8;
+    }
+
+
+    @keyframes rainFall {
+      from {
+        transform:
+          translateY(-60px)
+          rotate(10deg);
+      }
+
+      to {
+        transform:
+          translateY(110vh)
+          rotate(10deg);
+      }
+    }
+
+
+    @keyframes sadShake {
+      from {
+        transform:
+          translateX(-5px)
+          rotate(-1deg);
+      }
+
+      to {
+        transform:
+          translateX(5px)
+          rotate(1deg);
+      }
     }
 
 
@@ -1121,132 +1022,79 @@
        ===================================================== */
 
     .quiz-finished {
-
       display: none;
-
       width: 100%;
-
       max-width: 550px;
-
-      padding:
-        30px 15px;
+      padding: 30px 15px;
     }
 
 
     .quiz-finished-title {
-
-      font-size:
-        clamp(28px, 8vw, 43px);
-
+      font-size: clamp(28px, 8vw, 43px);
       font-weight: 900;
-
       line-height: 1.1;
-
       margin-bottom: 20px;
     }
 
 
     .quiz-finished-text {
-
-      font-size:
-        clamp(18px, 5vw, 25px);
-
+      font-size: clamp(18px, 5vw, 25px);
       font-weight: 700;
-
       line-height: 1.3;
-
       margin-bottom: 35px;
     }
 
 
+
     /* =====================================================
-       ЧЕТВЕРТА СТОРІНКА — АВТЕНТИФІКАЦІЯ
+       ЧЕТВЕРТА СТОРІНКА
        ===================================================== */
 
     #page4 {
-
       display: none;
-
       min-height: 100vh;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
     }
 
 
     .auth-title {
-
-      font-size:
-        clamp(28px, 8vw, 45px);
-
+      font-size: clamp(28px, 8vw, 45px);
       font-weight: 900;
-
       line-height: 1.1;
-
       margin-bottom: 15px;
     }
 
 
     .auth-text {
-
-      font-size:
-        clamp(18px, 5vw, 25px);
-
+      font-size: clamp(18px, 5vw, 25px);
       font-weight: 700;
-
       line-height: 1.3;
-
       margin-bottom: 30px;
-    }
-
-
-    .auth-hint {
-
-      font-size: 15px;
-
-      color: #777;
-
-      margin-top: 18px;
     }
 
 
 
     /* =====================================================
-       П'ЯТА СТОРІНКА — ЗАГОТОВКА СВІДОЦТВА
+       П'ЯТА СТОРІНКА
        ===================================================== */
 
     #page5 {
-
       display: none;
-
       min-height: 100vh;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
     }
 
 
     .certificate-placeholder {
-
       width: 92%;
-
       max-width: 600px;
-
-      padding:
-        40px 20px;
-
-      background:
-        #fffaf4;
-
-      border:
-        5px solid #8B6548;
-
+      padding: 40px 20px;
+      background: #fffaf4;
+      border: 5px solid #8B6548;
       box-shadow:
         0 10px 30px
         rgba(0,0,0,0.18);
@@ -1254,22 +1102,14 @@
 
 
     .certificate-placeholder h1 {
-
-      font-size:
-        clamp(28px, 8vw, 45px);
-
-      margin:
-        0 0 20px;
+      font-size: clamp(28px, 8vw, 45px);
+      margin: 0 0 20px;
     }
 
 
     .certificate-placeholder p {
-
-      font-size:
-        clamp(18px, 5vw, 25px);
-
+      font-size: clamp(18px, 5vw, 25px);
       font-weight: 700;
-
       line-height: 1.4;
     }
 
@@ -1290,7 +1130,6 @@
     class="page"
   >
 
-
     <img
       class="me"
       id="me"
@@ -1298,30 +1137,15 @@
       alt="Я махаю"
     >
 
-
     <div class="hello">
 
-      <div class="decor d1">
-        ♡
-      </div>
-
-      <div class="decor d2">
-        ✦
-      </div>
-
-      <div class="decor d3">
-        :3
-      </div>
-
-      <div class="decor d4">
-        👋
-      </div>
-
+      <div class="decor d1">♡</div>
+      <div class="decor d2">✦</div>
+      <div class="decor d3">:3</div>
+      <div class="decor d4">👋</div>
 
       <div class="hello-text">
-
         ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ
-
       </div>
 
     </div>
@@ -1331,9 +1155,7 @@
       class="reply-text"
       id="replyText"
     >
-
       ПІЛІВЄЄЄЄЄЄЄЄЄЄЄЄЄЄЄТ У ВІДПОВІДЬ
-
     </div>
 
 
@@ -1341,9 +1163,7 @@
       class="hand"
       id="helloButton"
     >
-
       👋
-
     </button>
 
   </div>
@@ -1351,7 +1171,7 @@
 
 
   <!-- =====================================================
-       СТОРІНКА 2 — ФОТАЧКІІІІІ
+       СТОРІНКА 2
        ===================================================== -->
 
   <div
@@ -1359,24 +1179,16 @@
     class="page"
   >
 
-
     <div class="page2-title">
-
       ФОТАЧКІІІІІ 📸
-
     </div>
-
 
 
     <div class="photos-area">
 
-
-      <!-- МОТУЗКА 1 -->
-
       <div class="rope-row">
 
         <div class="rope rope1"></div>
-
 
         <img
           class="photo p1"
@@ -1416,13 +1228,9 @@
       </div>
 
 
-
-      <!-- МОТУЗКА 2 -->
-
       <div class="rope-row">
 
         <div class="rope rope2"></div>
-
 
         <img
           class="photo p4"
@@ -1450,13 +1258,9 @@
       </div>
 
 
-
-      <!-- МОТУЗКА 3 -->
-
       <div class="rope-row">
 
         <div class="rope rope3"></div>
-
 
         <img
           class="photo p6"
@@ -1498,11 +1302,9 @@
     </div>
 
 
-
     <div class="captcha-title">
 
       ПЕРЕВІРКА НА<br>
-
       КОХАНУ ТАНКЄТАЧКУ ❤️
 
     </div>
@@ -1518,7 +1320,6 @@
         src="fingerprint.png"
         alt="Відбиток пальця"
       >
-
 
       <div
         class="progress-ring"
@@ -1537,18 +1338,12 @@
         ✓
       </div>
 
-
       <div class="success-text">
-
         ПЕРЕВІРКУ ПРОЙДЕНО
-
       </div>
 
-
       <div class="success-love">
-
         Я ТЕБЕ ДУЖЕ ДУЖЕ СИЛЬНО КОХАЮ ❤️
-
       </div>
 
     </div>
@@ -1566,11 +1361,8 @@
     class="page"
   >
 
-
     <div class="quiz-title">
-
       МІНІ-ВІКТОРИНА 😈
-
     </div>
 
 
@@ -1579,14 +1371,11 @@
       id="questionBox"
     >
 
-
       <div
         class="question-number"
         id="questionNumber"
       >
-
         ПИТАННЯ 1 / 3
-
       </div>
 
 
@@ -1594,9 +1383,7 @@
         class="question-text"
         id="questionText"
       >
-
         КОЛИ МИ ПОЧАЛИ ЗУСТРІЧАТИСЬ?
-
       </div>
 
 
@@ -1609,9 +1396,7 @@
           class="answer-button"
           data-answer="wrong"
         >
-
           15 серпня
-
         </button>
 
 
@@ -1619,9 +1404,7 @@
           class="answer-button"
           data-answer="correct"
         >
-
           16 серпня
-
         </button>
 
 
@@ -1629,9 +1412,7 @@
           class="answer-button"
           data-answer="wrong"
         >
-
           13 серпня
-
         </button>
 
       </div>
@@ -1641,9 +1422,7 @@
         class="prank-message"
         id="prankMessage"
       >
-
         ОТ ВРЄДІНА 😭
-
       </div>
 
     </div>
@@ -1655,11 +1434,8 @@
       id="quizFinished"
     >
 
-
       <div class="quiz-finished-title">
-
         ВІТАЄМО! 🎉
-
       </div>
 
 
@@ -1702,14 +1478,46 @@
 
 
   <!-- =====================================================
-       СТОРІНКА 4 — АВТЕНТИФІКАЦІЯ
+       СУМНА СТОРІНКА
+       ===================================================== -->
+
+  <div
+    id="sadPage"
+    class="page"
+  >
+
+    <div class="rain" id="rain"></div>
+
+
+    <div class="sad-title">
+      😭 😢 😭
+    </div>
+
+
+    <div class="sad-text">
+      ПАКА Я ПЛАКАТЬ
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       СЕРЦЯ / КОНФЕТІ
+       ===================================================== -->
+
+  <div id="celebration"></div>
+
+
+
+  <!-- =====================================================
+       СТОРІНКА 4
        ===================================================== -->
 
   <div
     id="page4"
     class="page"
   >
-
 
     <div class="auth-title">
 
@@ -1733,7 +1541,7 @@
 
 
   <!-- =====================================================
-       СТОРІНКА 5 — ЗАГОТОВКА ПІД СВІДОЦТВО
+       СТОРІНКА 5
        ===================================================== -->
 
   <div
@@ -1741,15 +1549,12 @@
     class="page"
   >
 
-
     <div
       class="certificate-placeholder"
     >
 
       <h1>
-
         💍 СВІДОЦТВО 💍
-
       </h1>
 
 
@@ -1853,19 +1658,12 @@
       "click",
       () => {
 
-
         replyText.textContent =
           "ДААААА ВОНА ПОМАХАЛА 😭❤️";
-
 
         helloButton.textContent =
           "👋🥹";
 
-
-        /*
-          Даємо їй 3,5 секунди
-          роздивитися реакцію
-        */
 
         setTimeout(() => {
 
@@ -1894,11 +1692,8 @@
     ) {
 
       let holding = false;
-
       let startTime = 0;
-
       let timer = null;
-
       let animation = null;
 
 
@@ -1958,7 +1753,6 @@
 
         holding = true;
 
-
         startTime =
           Date.now();
 
@@ -1973,25 +1767,19 @@
         timer =
           setTimeout(() => {
 
-
             holding = false;
-
 
             cancelAnimationFrame(
               animation
             );
 
-
             ring.style.display =
               "none";
-
 
             button.style.display =
               "none";
 
-
             callback();
-
 
           }, seconds * 1000);
 
@@ -2074,7 +1862,6 @@
 
       () => {
 
-
         const success =
           document.getElementById(
             "success1"
@@ -2135,8 +1922,137 @@
         "quizFinished"
       );
 
+    const celebration =
+      document.getElementById(
+        "celebration"
+      );
+
+    const sadPage =
+      document.getElementById(
+        "sadPage"
+      );
+
+    const rain =
+      document.getElementById(
+        "rain"
+      );
+
 
     let currentQuestion = 1;
+
+    let equalAnswerShown = false;
+
+
+
+    /* =====================================================
+       ПОКАЗАТИ ТРЕТЄ ПИТАННЯ
+       ===================================================== */
+
+    function showQuestion3() {
+
+      currentQuestion = 3;
+
+
+      prankMessage.classList.remove(
+        "show"
+      );
+
+
+      questionNumber.textContent =
+        "ПИТАННЯ 3 / 3";
+
+
+      questionText.textContent =
+        "ТИ МЕНЕ ЛЮБИШ?";
+
+
+      answers.innerHTML = `
+
+        <button
+          class="answer-button"
+          data-answer="no"
+        >
+          НІ
+        </button>
+
+        <button
+          class="answer-button"
+          data-answer="yes"
+        >
+          ТАК ❤️
+        </button>
+
+      `;
+
+
+      addAnswerEvents();
+
+    }
+
+
+
+    /* =====================================================
+       ПОКАЗАТИ ДРУГЕ ПИТАННЯ
+       ===================================================== */
+
+    function showQuestion2(
+      withEqual = false
+    ) {
+
+      currentQuestion = 2;
+
+      equalAnswerShown =
+        withEqual;
+
+
+      prankMessage.classList.remove(
+        "show"
+      );
+
+
+      questionNumber.textContent =
+        "ПИТАННЯ 2 / 3";
+
+
+      questionText.textContent =
+        "ХТО СИЛЬНІШЕ ЛЮБИТЬ?";
+
+
+      answers.innerHTML = `
+
+        <button
+          class="answer-button"
+          data-answer="roma"
+        >
+          РОМА
+        </button>
+
+        <button
+          class="answer-button"
+          data-answer="tanketachka"
+        >
+          ТАНКЄТАЧКА
+        </button>
+
+        ${
+          withEqual
+            ? `
+              <button
+                class="answer-button equal-answer"
+                data-answer="equal"
+              >
+                ОДНАКОВО ❤️
+              </button>
+            `
+            : ""
+        }
+
+      `;
+
+
+      addAnswerEvents();
+
+    }
 
 
 
@@ -2146,80 +2062,15 @@
 
     function nextQuestion() {
 
-      currentQuestion++;
+      if (currentQuestion === 1) {
 
-
-      prankMessage.classList.remove(
-        "show"
-      );
-
-
-      if (currentQuestion === 2) {
-
-
-        questionNumber.textContent =
-          "ПИТАННЯ 2 / 3";
-
-
-        questionText.textContent =
-          "ХТО СИЛЬНІШЕ ЛЮБИТЬ?";
-
-
-        answers.innerHTML = `
-
-          <button
-            class="answer-button"
-            data-answer="roma"
-          >
-            РОМА
-          </button>
-
-          <button
-            class="answer-button"
-            data-answer="tanketachka"
-          >
-            ТАНКЄТАЧКА
-          </button>
-
-        `;
-
-
-        addAnswerEvents();
+        showQuestion2();
 
       }
 
+      else if (currentQuestion === 2) {
 
-      else if (currentQuestion === 3) {
-
-
-        questionNumber.textContent =
-          "ПИТАННЯ 3 / 3";
-
-
-        questionText.textContent =
-          "ТИ МЕНЕ ЛЮБИШ?";
-
-
-        answers.innerHTML = `
-
-          <button
-            class="answer-button"
-            data-answer="no"
-          >
-            НІ
-          </button>
-
-          <button
-            class="answer-button"
-            data-answer="yes"
-          >
-            ТАК ❤️
-          </button>
-
-        `;
-
-
-        addAnswerEvents();
+        showQuestion3();
 
       }
 
@@ -2228,11 +2079,236 @@
 
 
     /* =====================================================
-       ОБРОБКА ВІДПОВІДІ
+       ПОКАЗАТИ СУМНУ СТОРІНКУ
+       ===================================================== */
+
+    function showSadPage() {
+
+      document
+        .querySelectorAll(".page")
+        .forEach(p => {
+
+          p.style.display = "none";
+
+        });
+
+
+      sadPage.style.display =
+        "flex";
+
+
+      createRain();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+
+    /* =====================================================
+       ДОЩ
+       ===================================================== */
+
+    function createRain() {
+
+      rain.innerHTML = "";
+
+
+      const emojis = [
+        "💧",
+        "💦",
+        "😭",
+        "😢",
+        "💧"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 45;
+        i++
+      ) {
+
+        const drop =
+          document.createElement(
+            "div"
+          );
+
+
+        drop.className =
+          "raindrop";
+
+
+        drop.textContent =
+          emojis[
+            Math.floor(
+              Math.random() *
+              emojis.length
+            )
+          ];
+
+
+        drop.style.left =
+          Math.random() * 100 + "%";
+
+
+        drop.style.animationDuration =
+          (0.8 + Math.random() * 1.7)
+          + "s";
+
+
+        drop.style.animationDelay =
+          Math.random() * 2 + "s";
+
+
+        drop.style.fontSize =
+          (18 + Math.random() * 22)
+          + "px";
+
+
+        rain.appendChild(
+          drop
+        );
+
+      }
+
+    }
+
+
+
+    /* =====================================================
+       СВЯТКУВАННЯ
+       ===================================================== */
+
+    function startCelebration() {
+
+      celebration.style.display =
+        "block";
+
+
+      celebration.innerHTML =
+        "";
+
+
+      const hearts = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "💞"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 35;
+        i++
+      ) {
+
+        const item =
+          document.createElement(
+            "div"
+          );
+
+
+        item.className =
+          "celebration-item celebration-heart";
+
+
+        item.textContent =
+          hearts[
+            Math.floor(
+              Math.random() *
+              hearts.length
+            )
+          ];
+
+
+        item.style.left =
+          Math.random() * 100 + "%";
+
+
+        item.style.animationDuration =
+          (1.8 + Math.random() * 2.2)
+          + "s";
+
+
+        item.style.animationDelay =
+          Math.random() * .8 + "s";
+
+
+        celebration.appendChild(
+          item
+        );
+
+      }
+
+
+      for (
+        let i = 0;
+        i < 45;
+        i++
+      ) {
+
+        const confetti =
+          document.createElement(
+            "div"
+          );
+
+
+        confetti.className =
+          "celebration-item celebration-confetti";
+
+
+        confetti.style.left =
+          Math.random() * 100 + "%";
+
+
+        confetti.style.animationDuration =
+          (1.5 + Math.random() * 2)
+          + "s";
+
+
+        confetti.style.animationDelay =
+          Math.random() * .8 + "s";
+
+
+        confetti.style.transform =
+          `rotate(
+            ${Math.random() * 360}deg
+          )`;
+
+
+        celebration.appendChild(
+          confetti
+        );
+
+      }
+
+
+      setTimeout(() => {
+
+        celebration.style.display =
+          "none";
+
+        celebration.innerHTML =
+          "";
+
+      }, 4500);
+
+    }
+
+
+
+    /* =====================================================
+       ОБРОБКА ВІДПОВІДЕЙ
        ===================================================== */
 
     function addAnswerEvents() {
-
 
       const buttons =
         answers.querySelectorAll(
@@ -2242,11 +2318,9 @@
 
       buttons.forEach(button => {
 
-
         button.addEventListener(
           "click",
           () => {
-
 
             const answer =
               button.dataset.answer;
@@ -2261,7 +2335,6 @@
               currentQuestion === 1
             ) {
 
-
               if (
                 answer === "correct"
               ) {
@@ -2270,36 +2343,52 @@
                   "correct"
                 );
 
+
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
+                setTimeout(() => {
+
+                  nextQuestion();
+
+                }, 700);
+
               }
+
               else {
 
                 button.classList.add(
                   "wrong"
                 );
 
+
+                button.disabled =
+                  true;
+
+
+                setTimeout(() => {
+
+                  button.classList.remove(
+                    "wrong"
+                  );
+
+                  button.disabled =
+                    false;
+
+                }, 700);
+
               }
-
-
-              buttons.forEach(b => {
-
-                b.disabled = true;
-
-              });
-
-
-              setTimeout(() => {
-
-                nextQuestion();
-
-              }, 1000);
-
 
             }
 
 
 
             /* =============================================
-               ПИТАННЯ 2 — ПРИКОЛ
+               ПИТАННЯ 2
                ============================================= */
 
             else if (
@@ -2307,15 +2396,92 @@
             ) {
 
 
+              /*
+                ТІЛЬКИ "ОДНАКОВО"
+                Є ПРАВИЛЬНОЮ
+              */
+
+              if (
+                answer === "equal"
+              ) {
+
+                button.classList.add(
+                  "correct"
+                );
+
+
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
+                setTimeout(() => {
+
+                  showQuestion3();
+
+                }, 800);
+
+
+                return;
+
+              }
+
+
+
+              /*
+                РОМА — НЕПРАВИЛЬНА
+              */
+
+              if (
+                answer === "roma"
+              ) {
+
+                button.classList.add(
+                  "wrong"
+                );
+
+
+                button.disabled =
+                  true;
+
+
+                /*
+                  Після першої помилки
+                  показуємо "ОДНАКОВО"
+                */
+
+                if (
+                  !equalAnswerShown
+                ) {
+
+                  setTimeout(() => {
+
+                    showQuestion2(
+                      true
+                    );
+
+                  }, 700);
+
+                }
+
+
+                return;
+
+              }
+
+
+
+              /*
+                ТАНКЄТАЧКА —
+                ПРИКОЛ
+              */
+
               if (
                 answer ===
                 "tanketachka"
               ) {
-
-
-                /*
-                  Червоний прикол
-                */
 
                 document.body
                   .classList.add(
@@ -2337,6 +2503,13 @@
                 );
 
 
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
                 setTimeout(() => {
 
                   document.body
@@ -2344,50 +2517,18 @@
                       "prank"
                     );
 
-                }, 1000);
+                  /*
+                    Після приколу
+                    повертаємо питання,
+                    але додаємо
+                    "ОДНАКОВО ❤️"
+                  */
 
-
-                /*
-                  Після приколу
-                  все одно йдемо далі
-                */
-
-                buttons.forEach(b => {
-
-                  b.disabled = true;
-
-                });
-
-
-                setTimeout(() => {
-
-                  nextQuestion();
+                  showQuestion2(
+                    true
+                  );
 
                 }, 1800);
-
-              }
-
-
-              else {
-
-
-                button.classList.add(
-                  "correct"
-                );
-
-
-                buttons.forEach(b => {
-
-                  b.disabled = true;
-
-                });
-
-
-                setTimeout(() => {
-
-                  nextQuestion();
-
-                }, 1000);
 
               }
 
@@ -2404,35 +2545,75 @@
             ) {
 
 
-              button.classList.add(
-                "correct"
-              );
+              /*
+                ТАК ❤️
+              */
+
+              if (
+                answer === "yes"
+              ) {
+
+                button.classList.add(
+                  "correct"
+                );
 
 
-              buttons.forEach(b => {
+                buttons.forEach(b => {
 
-                b.disabled = true;
+                  b.disabled = true;
 
-              });
-
-
-              setTimeout(() => {
+                });
 
 
-                questionBox.style.display =
-                  "none";
+                startCelebration();
 
 
-                quizFinished.style.display =
-                  "block";
+                setTimeout(() => {
+
+                  questionBox.style.display =
+                    "none";
 
 
-              }, 1000);
+                  quizFinished.style.display =
+                    "block";
+
+                }, 2500);
+
+              }
+
+
+
+              /*
+                НІ
+              */
+
+              else if (
+                answer === "no"
+              ) {
+
+                button.classList.add(
+                  "wrong"
+                );
+
+
+                buttons.forEach(b => {
+
+                  b.disabled = true;
+
+                });
+
+
+                setTimeout(() => {
+
+                  showSadPage();
+
+                }, 700);
+
+              }
 
             }
 
           }
-
         );
 
       });
@@ -2465,23 +2646,12 @@
 
       () => {
 
-
-        /*
-          Після правильного утримання
-          одразу показуємо наступну сторінку
-        */
-
         showPage(
           document.getElementById(
             "page4"
           )
         );
 
-
-        /*
-          Через 2 секунди —
-          заготовка під свідоцтво
-        */
 
         setTimeout(() => {
 
